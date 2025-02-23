@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import LoadingScreen from "./components/Loading-Screen/LoadingScreen";
 import Navbar from "./components/Navbar/navbar";
+import MovingCards from "./components/cards/moving-cards";
+import SideButton from "./components/SideButtons/side-button";
 
 
 export default function Home() {
@@ -16,11 +18,13 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full">
       <Navbar />
-      <div className="mt-[200px]">
-        <h1 className="font-serif text-7xl font-extrabold bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent">
+      <div className="mt-[120px]">
+        {/* <h1 className="font-serif text-7xl font-extrabold bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent">
           Aarogya Diagnostic
-        </h1>
+        </h1> */}
       </div> 
+    <MovingCards/>
+    <SideButton/>
     </div>
   );
 }
