@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Navbar from '../components/Navbar/navbar';
 import Footer from '../components/Footer/Footer';
 
@@ -165,9 +166,11 @@ const AboutPage = () => {
           {filteredTeamMembers.map((member) => (
             <div key={member.id} className="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
               <div className="relative h-56 overflow-hidden">
-                <img 
+                <Image 
                   src={member.image} 
                   alt={member.name} 
+                  width={400}
+                  height={300}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -202,19 +205,37 @@ const AboutPage = () => {
               }
             `}</style>
             <div className="relative overflow-hidden rounded-lg group cursor-pointer w-[300px] sm:w-[350px] md:w-[400px] h-[400px] sm:h-[450px] md:h-[500px]">
-              <img src="/photo-1552072804-3ba9555a8a74.jpg" alt="Modern Diagnostic Center" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <Image
+                src="/photo-1552072804-3ba9555a8a74.jpg"
+                alt="Modern Diagnostic Center"
+                width={400}
+                height={500}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
               <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <p className="text-white text-lg font-semibold">State-of-the-art Facilities</p>
               </div>
             </div>
             <div className="relative overflow-hidden rounded-lg group cursor-pointer w-[300px] sm:w-[350px] md:w-[400px] h-[400px] sm:h-[450px] md:h-[500px]">
-              <img src="/photo-1617633784388-f1818619287b.jpg" alt="Advanced Laboratory" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <Image
+                src="/photo-1617633784388-f1818619287b.jpg"
+                alt="Advanced Laboratory"
+                width={400}
+                height={500}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
               <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <p className="text-white text-lg font-semibold">Advanced Laboratory</p>
               </div>
             </div>
             <div className="relative overflow-hidden rounded-lg group cursor-pointer w-[300px] sm:w-[350px] md:w-[400px] h-[400px] sm:h-[450px] md:h-[500px]">
-              <img src="/doctor-image.jpg" alt="Expert Medical Team" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <Image
+                src="/doctor-image.jpg"
+                alt="Expert Medical Team"
+                width={400}
+                height={500}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
               <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <p className="text-white text-lg font-semibold">Expert Medical Team</p>
               </div>
