@@ -64,7 +64,7 @@ const Navbar = () => {
             className="w-full md:w-auto"
             role="menuitem"
           >
-            <div className="text-lg md:text-base font-bold md:font-medium hover:font-bold cursor-pointer flex items-center gap-2 px-4 py-3 md:py-0 transition-colors duration-200 hover:bg-[#41691b] md:hover:bg-transparent rounded-lg">
+            <div className="text-lg md:text-base font-bold md:font-medium hover:font-bold cursor-pointer flex items-center gap-2 px-4 py-3 md:py-0 transition-colors duration-200 hover:bg-[white] hover:text-[#325818] md:hover:bg-transparent md:hover:text-white rounded-lg text-white">
               {item.Options}
             </div>
           </Link>

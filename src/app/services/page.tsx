@@ -133,7 +133,7 @@ const ServicesPage = () => {
 
 const ServiceCard = ({ title, description }: { title: string; description: string }) => {
   return (
-    <div className="p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden">
+    <div className="p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-opacity-75 group relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[#325818]/5 to-[#789e1f]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       <h3 className="text-xl font-semibold mb-4 text-[#325818] group-hover:text-[#41691b] transition-colors duration-300">{title}</h3>
       <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{description}</p>

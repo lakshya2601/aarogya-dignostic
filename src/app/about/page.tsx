@@ -39,6 +39,67 @@ const teamMembers = [
   }
 ];
 
+const WhyChooseUsIcons = {
+  equipment: (
+    <svg className="w-6 h-6 text-[#789e1f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+    </svg>
+  ),
+  professionals: (
+    <svg className="w-6 h-6 text-[#789e1f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>
+  ),
+  results: (
+    <svg className="w-6 h-6 text-[#789e1f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  ),
+  home: (
+    <svg className="w-6 h-6 text-[#789e1f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+    </svg>
+  ),
+  pricing: (
+    <svg className="w-6 h-6 text-[#789e1f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  ),
+  network: (
+    <svg className="w-6 h-6 text-[#789e1f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  )
+};
+
+const ValuesIcons = {
+  accuracy: (
+    <svg className="w-8 h-8 text-[#325818] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  ),
+  patient: (
+    <svg className="w-8 h-8 text-[#325818] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+    </svg>
+  ),
+  ethics: (
+    <svg className="w-8 h-8 text-[#325818] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+    </svg>
+  ),
+  innovation: (
+    <svg className="w-8 h-8 text-[#325818] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+    </svg>
+  ),
+  improvement: (
+    <svg className="w-8 h-8 text-[#325818] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+    </svg>
+  )
+};
+
 const AboutPage = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
@@ -75,28 +136,28 @@ const AboutPage = () => {
               <span className="mr-2">✨</span> Why Choose Us?
             </h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-6">
-              <li className="flex items-center space-x-2 hover:text-[#325818] transition-colors duration-300">
-                <span className="text-[#789e1f]">•</span>
+              <li className="flex items-center space-x-3 hover:text-[#325818] transition-colors duration-300">
+                {WhyChooseUsIcons.equipment}
                 <span>State-of-the-art diagnostic equipment</span>
               </li>
-              <li className="flex items-center space-x-2 hover:text-[#325818] transition-colors duration-300">
-                <span className="text-[#789e1f]">•</span>
+              <li className="flex items-center space-x-3 hover:text-[#325818] transition-colors duration-300">
+                {WhyChooseUsIcons.professionals}
                 <span>Highly qualified and experienced medical professionals</span>
               </li>
-              <li className="flex items-center space-x-2 hover:text-[#325818] transition-colors duration-300">
-                <span className="text-[#789e1f]">•</span>
+              <li className="flex items-center space-x-3 hover:text-[#325818] transition-colors duration-300">
+                {WhyChooseUsIcons.results}
                 <span>Quick and accurate test results</span>
               </li>
-              <li className="flex items-center space-x-2 hover:text-[#325818] transition-colors duration-300">
-                <span className="text-[#789e1f]">•</span>
+              <li className="flex items-center space-x-3 hover:text-[#325818] transition-colors duration-300">
+                {WhyChooseUsIcons.home}
                 <span>Convenient home collection services</span>
               </li>
-              <li className="flex items-center space-x-2 hover:text-[#325818] transition-colors duration-300">
-                <span className="text-[#789e1f]">•</span>
+              <li className="flex items-center space-x-3 hover:text-[#325818] transition-colors duration-300">
+                {WhyChooseUsIcons.pricing}
                 <span>Competitive and transparent pricing</span>
               </li>
-              <li className="flex items-center space-x-2 hover:text-[#325818] transition-colors duration-300">
-                <span className="text-[#789e1f]">•</span>
+              <li className="flex items-center space-x-3 hover:text-[#325818] transition-colors duration-300">
+                {WhyChooseUsIcons.network}
                 <span>Wide network of collection centers</span>
               </li>
             </ul>
@@ -106,24 +167,34 @@ const AboutPage = () => {
               <span className="mr-2">💫</span> Our Values
             </h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <li className="p-4 rounded-lg bg-gray-50 hover:bg-[#325818]/10 transition-colors duration-300 flex items-center space-x-2">
-                <span className="text-[#789e1f] font-bold">•</span>
+              <li className="p-4 rounded-lg bg-gray-50 hover:bg-[#325818]/10 transition-colors duration-300 flex items-center space-x-3">
+                <div className="w-12 h-12 bg-[#325818]/10 rounded-full flex items-center justify-center group-hover:bg-[#325818] transition-all duration-300">
+                  {ValuesIcons.accuracy}
+                </div>
                 <span>Accuracy and Reliability</span>
               </li>
-              <li className="p-4 rounded-lg bg-gray-50 hover:bg-[#325818]/10 transition-colors duration-300 flex items-center space-x-2">
-                <span className="text-[#789e1f] font-bold">•</span>
+              <li className="p-4 rounded-lg bg-gray-50 hover:bg-[#325818]/10 transition-colors duration-300 flex items-center space-x-3">
+                <div className="w-12 h-12 bg-[#325818]/10 rounded-full flex items-center justify-center group-hover:bg-[#325818] transition-all duration-300">
+                  {ValuesIcons.patient}
+                </div>
                 <span>Patient-Centric Approach</span>
               </li>
-              <li className="p-4 rounded-lg bg-gray-50 hover:bg-[#325818]/10 transition-colors duration-300 flex items-center space-x-2">
-                <span className="text-[#789e1f] font-bold">•</span>
+              <li className="p-4 rounded-lg bg-gray-50 hover:bg-[#325818]/10 transition-colors duration-300 flex items-center space-x-3">
+                <div className="w-12 h-12 bg-[#325818]/10 rounded-full flex items-center justify-center group-hover:bg-[#325818] transition-all duration-300">
+                  {ValuesIcons.ethics}
+                </div>
                 <span>Ethical Practices</span>
               </li>
-              <li className="p-4 rounded-lg bg-gray-50 hover:bg-[#325818]/10 transition-colors duration-300 flex items-center space-x-2">
-                <span className="text-[#789e1f] font-bold">•</span>
+              <li className="p-4 rounded-lg bg-gray-50 hover:bg-[#325818]/10 transition-colors duration-300 flex items-center space-x-3">
+                <div className="w-12 h-12 bg-[#325818]/10 rounded-full flex items-center justify-center group-hover:bg-[#325818] transition-all duration-300">
+                  {ValuesIcons.innovation}
+                </div>
                 <span>Innovation and Technology</span>
               </li>
-              <li className="p-4 rounded-lg bg-gray-50 hover:bg-[#325818]/10 transition-colors duration-300 flex items-center space-x-2">
-                <span className="text-[#789e1f] font-bold">•</span>
+              <li className="p-4 rounded-lg bg-gray-50 hover:bg-[#325818]/10 transition-colors duration-300 flex items-center space-x-3">
+                <div className="w-12 h-12 bg-[#325818]/10 rounded-full flex items-center justify-center group-hover:bg-[#325818] transition-all duration-300">
+                  {ValuesIcons.improvement}
+                </div>
                 <span>Continuous Improvement</span>
               </li>
             </ul>
@@ -164,7 +235,7 @@ const AboutPage = () => {
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredTeamMembers.map((member) => (
-            <div key={member.id} className="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div key={member.id} className="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:bg-opacity-75">
               <div className="relative h-56 overflow-hidden">
                 <Image 
                   src={member.image} 
@@ -212,8 +283,8 @@ const AboutPage = () => {
                 height={500}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-white text-lg font-semibold">State-of-the-art Facilities</p>
+              <div className="absolute inset-0 backdrop-blur-sm bg-white/30 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                <p className="text-[#325818] text-lg font-semibold bg-white/80 px-6 py-3 rounded-lg shadow-lg">State-of-the-art Facilities</p>
               </div>
             </div>
             <div className="relative overflow-hidden rounded-lg group cursor-pointer w-[300px] sm:w-[350px] md:w-[400px] h-[400px] sm:h-[450px] md:h-[500px]">
@@ -224,8 +295,8 @@ const AboutPage = () => {
                 height={500}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-white text-lg font-semibold">Advanced Laboratory</p>
+              <div className="absolute inset-0 backdrop-blur-sm bg-white/30 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                <p className="text-[#325818] text-lg font-semibold bg-white/80 px-6 py-3 rounded-lg shadow-lg">Advanced Laboratory</p>
               </div>
             </div>
             <div className="relative overflow-hidden rounded-lg group cursor-pointer w-[300px] sm:w-[350px] md:w-[400px] h-[400px] sm:h-[450px] md:h-[500px]">
@@ -236,8 +307,8 @@ const AboutPage = () => {
                 height={500}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-white text-lg font-semibold">Expert Medical Team</p>
+              <div className="absolute inset-0 backdrop-blur-sm bg-white/30 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                <p className="text-[#325818] text-lg font-semibold bg-white/80 px-6 py-3 rounded-lg shadow-lg">Expert Medical Team</p>
               </div>
             </div>
           </div>
