@@ -24,7 +24,7 @@ const healthPackages = [
     id: 3,
     title: "Men's Health Check-Basic",
     tests: "Includes 50 Tests",
-    description: "Glyco Hemoglobin (HbA1c), Liver Function Test, TSH, Lipid Profile, Urea, Creatinine, Uric Acid, 25...",
+    description: "Glycon Hemoglobin (HbA1c), Liver Function Test, TSH, Lipid Profile, Urea, Creatinine, Uric Acid, 25...",
     oldPrice: "Rs. 5775",
     newPrice: "Rs. 1999",
     discount: "65% off",
