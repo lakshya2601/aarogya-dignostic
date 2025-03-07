@@ -108,65 +108,75 @@ const AboutPage = () => {
     : teamMembers.filter(member => member.role === activeFilter);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full">
+    <div className="min-h-screen bg-gray-50">
+    <div className="flex flex-col items-center justify-center w-full">
       <Navbar />
-      <div className="mt-[120px] w-[95%] mx-auto p-6 sm:p-8 bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#325818] via-[#41691b] to-[#789e1f]"></div>
-        <h1 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent text-center">
-          About Aarogya Diagnostic
-        </h1>
-        <div className="space-y-8 text-gray-700">
-          <p className="text-lg leading-relaxed text-center max-w-3xl mx-auto hover:text-gray-900 transition-colors duration-300">
-            Welcome to Aarogya Diagnostic, your trusted partner in healthcare diagnostics. 
-            We are committed to providing accurate, timely, and comprehensive diagnostic services 
-            to help you make informed decisions about your health.
-          </p>
-          <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-            <h2 className="text-2xl font-semibold mb-4 text-[#325818] flex items-center">
-              <span className="mr-2">🎯</span> Our Mission
+      <div className="mt-[120px] w-[95%] max-w-7xl mx-auto p-6 sm:p-8 bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg relative overflow-hidden transform transition-all duration-300 hover:shadow-xl">
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#325818] via-[#41691b] to-[#789e1f] animate-gradient-x"></div>
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#325818]/5 via-[#41691b]/5 to-[#789e1f]/5 blur-3xl transform -skew-y-6 scale-150 animate-pulse-slow"></div>
+          <div className="relative z-10">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-8 sm:mb-10 bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent text-center tracking-tight animate-gradient-x">
+              About Aarogya Diagnostic
+            </h1>
+            <div className="flex justify-center mb-8">
+              <div className="w-24 h-1 bg-gradient-to-r from-[#325818] via-[#41691b] to-[#789e1f] rounded-full transform transition-all duration-300 hover:scale-x-110"></div>
+            </div>
+            <div className="space-y-8 text-gray-700">
+              <p className="text-xl leading-relaxed text-center max-w-3xl mx-auto hover:text-gray-900 transition-colors duration-300 font-light">
+                Welcome to Aarogya Diagnostic, your trusted partner in healthcare diagnostics. 
+                We are committed to providing accurate, timely, and comprehensive diagnostic services 
+                to help you make informed decisions about your health.
+              </p>
+            </div>
+          </div>
+        </div>
+          <div className="bg-white p-8 rounded-xl">
+            <h2 className="text-3xl font-bold mb-6 text-[#325818] flex items-center">
+              <span className="mr-3 text-2xl">🎯</span> Our Mission
             </h2>
-            <p className="text-lg leading-relaxed">
+            <p className="text-xl leading-relaxed text-gray-700 hover:text-gray-900 transition-colors duration-300">
               To deliver exceptional diagnostic services with precision and care, making quality 
               healthcare accessible to all. We strive to be at the forefront of medical 
               diagnostics through continuous innovation and adherence to international standards.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-            <h2 className="text-2xl font-semibold mb-4 text-[#325818] flex items-center">
-              <span className="mr-2">✨</span> Why Choose Us?
+          <div className="bg-white p-8 rounded-xl shadow-sm">
+            <h2 className="text-3xl font-bold mb-6 text-[#325818] flex items-center">
+              <span className="mr-3 text-2xl">✨</span> Why Choose Us?
             </h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-6">
-              <li className="flex items-center space-x-3 hover:text-[#325818] transition-colors duration-300">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <li className="flex items-center space-x-4 p-4 rounded-lg hover:bg-[#325818]/5 transition-all duration-300 group">
                 {WhyChooseUsIcons.equipment}
                 <span>State-of-the-art diagnostic equipment</span>
               </li>
-              <li className="flex items-center space-x-3 hover:text-[#325818] transition-colors duration-300">
+              <li className="flex items-center space-x-4 p-4 rounded-lg hover:bg-[#325818]/5 transition-all duration-300 group">
                 {WhyChooseUsIcons.professionals}
                 <span>Highly qualified and experienced medical professionals</span>
               </li>
-              <li className="flex items-center space-x-3 hover:text-[#325818] transition-colors duration-300">
+              <li className="flex items-center space-x-4 p-4 rounded-lg hover:bg-[#325818]/5 transition-all duration-300 group">
                 {WhyChooseUsIcons.results}
                 <span>Quick and accurate test results</span>
               </li>
-              <li className="flex items-center space-x-3 hover:text-[#325818] transition-colors duration-300">
+              <li className="flex items-center space-x-4 p-4 rounded-lg hover:bg-[#325818]/5 transition-all duration-300 group">
                 {WhyChooseUsIcons.home}
                 <span>Convenient home collection services</span>
               </li>
-              <li className="flex items-center space-x-3 hover:text-[#325818] transition-colors duration-300">
+              <li className="flex items-center space-x-4 p-4 rounded-lg hover:bg-[#325818]/5 transition-all duration-300 group">
                 {WhyChooseUsIcons.pricing}
                 <span>Competitive and transparent pricing</span>
               </li>
-              <li className="flex items-center space-x-3 hover:text-[#325818] transition-colors duration-300">
+              <li className="flex items-center space-x-4 p-4 rounded-lg hover:bg-[#325818]/5 transition-all duration-300 group">
                 {WhyChooseUsIcons.network}
                 <span>Wide network of collection centers</span>
               </li>
             </ul>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-            <h2 className="text-2xl font-semibold mb-4 text-[#325818] flex items-center">
-              <span className="mr-2">💫</span> Our Values
+          <div className="bg-white p-8 rounded-xl mt-8">
+            <h2 className="text-3xl font-bold mb-6 text-[#325818] flex items-center">
+              <span className="mr-3 text-2xl">💫</span> Our Values
             </h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <li className="p-4 rounded-lg bg-gray-50 hover:bg-[#325818]/10 transition-colors duration-300 flex items-center space-x-3">
                 <div className="w-12 h-12 bg-[#325818]/10 rounded-full flex items-center justify-center group-hover:bg-[#325818] transition-all duration-300">
                   {ValuesIcons.accuracy}
@@ -261,9 +271,9 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="mt-12">
+      <div className="mt-12 w-full flex flex-col items-center">
         <h2 className="text-2xl font-semibold mb-6 text-[#325818]">Our Facilities</h2>
-        <div className="overflow-x-auto pb-6 scrollbar-hide">
+        <div className="overflow-x-auto pb-6 scrollbar-hide w-full flex justify-center">
           <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 min-w-max">
             <style jsx global>{`
               .scrollbar-hide::-webkit-scrollbar {
