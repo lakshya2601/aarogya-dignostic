@@ -23,27 +23,6 @@ export default function RootLayout({
         className="antialiased"
       >
         {children}
-        {/* Calendly Widget */}
-        {/* <script
-          src="https://assets.calendly.com/assets/external/widget.js"
-          type="text/javascript"
-          async
-        ></script> */}
-        {/* <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.onload = function() {
-                Calendly.initBadgeWidget({
-                  url: 'https://calendly.com/lakshyaporwal2601',
-                  text: 'Schedule Bookings',
-                  color: '#0069ff',
-                  textColor: '#ffffff',
-                  branding: true
-                });
-              };
-            `,
-          }}
-        /> */}
       </body>
     </html>
   );
