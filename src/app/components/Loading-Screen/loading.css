@@ -1,0 +1,100 @@
+.loading-container {
+  position: relative;
+  transform-origin: center;
+}
+
+.loading-svg {
+  transform-origin: center;
+}
+
+.back-line {
+  animation: pulse 3s ease-in-out infinite;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+
+.front-line {
+  animation: dash 3s ease-in-out infinite;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+
+@keyframes dash {
+  0%, 100% {
+    stroke-dashoffset: 400;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.back-line {
+  animation: ecgBackground 2s ease-in-out infinite;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  opacity: 0.4;
+}
+
+@keyframes ecgBackground {
+  0% {
+    stroke-dashoffset: 200;
+    opacity: 0.4;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    opacity: 0.6;
+  }
+  100% {
+    stroke-dashoffset: -200;
+    opacity: 0.4;
+  }
+}
+
+.front-line {
+  animation: dash 2s ease-in-out infinite;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -200;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.loading-pulse {
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+}
