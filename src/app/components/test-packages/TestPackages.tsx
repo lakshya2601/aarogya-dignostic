@@ -94,7 +94,11 @@ const TestPackages: React.FC = () => {
                 <span className="text-sm text-gray-600">Report in {pkg.reportTime}</span>
               </div>
               
-              <button className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors duration-200">
+              <button 
+                onClick={() => window.location.href = '/book-test'}
+                type="button"
+                className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors duration-200"
+              >
                 Book Now
               </button>
             </div>

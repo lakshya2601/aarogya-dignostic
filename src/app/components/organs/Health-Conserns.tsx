@@ -96,32 +96,31 @@ const HealthConcerns = () => {
 
 
   return (
-<div className="w-[95%] mx-auto p-6 rounded-xl bg-white shadow-lg">
-  <div className="flex justify-between items-center mb-6">
-    <h2 className="text-2xl font-semibold bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent">Search by Health Concerns</h2>
-    
+<div className="w-[95%] mx-auto p-8 rounded-2xl bg-white shadow-xl border border-gray-100 backdrop-blur-sm">
+  <div className="flex justify-between items-center mb-8">
+    <h2 className="text-3xl font-bold bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent tracking-tight">Search by Health Concerns</h2>
   </div>
 
   <button
     onClick={() => setActiveFilter('all')}
-    className="text-green-600 hover:text-green-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
+    className="text-green-600 hover:text-green-700 px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-green-50"
   >
     Show All
   </button>
 
-  <div className="mb-6 space-y-4">
-    <div className="relative">
+  <div className="mb-8 space-y-6">
+    <div className="relative transform transition-all duration-300 hover:scale-[1.02]">
       <input
         type="text"
         placeholder="Search Test"
         value={searchQuery}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
-        className="w-full px-4 py-3 pl-10 pr-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-base md:text-sm"
+        className="w-full px-6 py-4 pl-12 pr-4 rounded-xl border-2 border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-base transition-all duration-300 placeholder-gray-400 hover:border-green-300"
       />
       <svg
-        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-        width="16"
-        height="16"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 transition-colors duration-300 group-hover:text-green-500"
+        width="20"
+        height="20"
         viewBox="0 0 20 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -136,10 +135,10 @@ const HealthConcerns = () => {
       </svg>
     </div>
 
-    <div className="flex gap-2 md:gap-4 overflow-x-auto pb-2 hide-scrollbar">
+    <div className="flex gap-3 md:gap-4 overflow-x-auto pb-4 hide-scrollbar">
       <button
         onClick={() => setActiveFilter('blood')}
-        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${activeFilter === 'blood' ? 'bg-green-100 text-green-600' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+        className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${activeFilter === 'blood' ? 'bg-green-100 text-green-600 shadow-md' : 'bg-gray-50 text-gray-600 hover:bg-gray-100'}`}
       >
         Blood Tests
       </button>
@@ -182,15 +181,15 @@ const HealthConcerns = () => {
     </div>
   </div>
 
-  <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
+  <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
     {filteredConcerns.map((concern, index) => (
       <div
         key={index}
-        className="bg-white p-3 md:p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center space-y-1 md:space-y-2 border border-gray-100 cursor-pointer group hover:scale-105"
+        className="bg-white p-4 md:p-5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center text-center space-y-2 md:space-y-3 border border-gray-100 cursor-pointer group hover:scale-105 hover:border-green-100"
       >
-        <span className="text-xl md:text-2xl group-hover:scale-110 transition-transform duration-200">{concern.icon}</span>
-        <span className="text-xs md:text-sm font-medium text-gray-700 group-hover:text-green-600 transition-colors duration-200">{concern.name}</span>
-        <p className="text-[10px] md:text-xs text-gray-500 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">{concern.description}</p>
+        <span className="text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-300">{concern.icon}</span>
+        <span className="text-sm md:text-base font-medium text-gray-700 group-hover:text-green-600 transition-colors duration-300">{concern.name}</span>
+        <p className="text-xs md:text-sm text-gray-500 mt-1 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">{concern.description}</p>
       </div>
     ))}
   </div>
