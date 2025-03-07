@@ -55,7 +55,7 @@ const BlogPage = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
-            <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+            <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:bg-opacity-75">
               <div className="h-48 bg-gray-200">
                 {/* Image placeholder */}
                 <div className="w-full h-full flex items-center justify-center text-gray-500">
