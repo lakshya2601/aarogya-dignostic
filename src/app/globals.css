@@ -22,9 +22,9 @@ body {
 
 .loading svg polyline {
   fill: none;
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  strokeWidth: 3;
+  strokeLinecap: round;
+  strokeLinejoin: round;
 }
 
 .loading svg polyline#back {
@@ -48,4 +48,12 @@ body {
   }
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
