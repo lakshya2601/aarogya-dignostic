@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar/navbar';
 import Footer from '../components/Footer/Footer';
+import SideButton from '../components/SideButtons/side-button';
 
 // SVG Icons for Service Cards
 const DiagnosticIcon = () => (
@@ -161,6 +162,7 @@ const ServicesPage = () => {
         </div>
       </div>
       <div className="mt-16 w-full">
+        <SideButton />
         <Footer />
       </div>
     </div>

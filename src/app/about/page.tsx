@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Navbar from '../components/Navbar/navbar';
 import Footer from '../components/Footer/Footer';
+import SideButton from '../components/SideButtons/side-button';
 
 const teamMembers = [
   {
@@ -324,6 +325,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
+      <SideButton />
       <Footer/>
     </div>
      
