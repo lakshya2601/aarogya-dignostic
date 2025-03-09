@@ -109,7 +109,7 @@ const HealthConcerns = () => {
   </button>
 
   <div className="mb-8 space-y-6">
-    <div className="relative transform transition-all duration-300 hover:scale-[1.02]">
+    <div className="relative">
       <input
         type="text"
         placeholder="Search Test"
