@@ -76,20 +76,20 @@ const Testimonials: React.FC = () => {
     const scrollInterval = setInterval(() => {
       if (!isPaused) {
         setPosition((prevPosition) => {
-          const nextPosition = prevPosition + 0.05;
+          const nextPosition = prevPosition + 0.02; // Reduced from 0.05 to 0.02
           if (nextPosition >= 100) {
             return 0;
           }
           return nextPosition;
         });
       }
-    }, 10);
+    }, 20); // Increased from 10 to 20 milliseconds
 
     return () => clearInterval(scrollInterval);
   }, [isPaused]);
 
   return (
-    <div className="w-[95%] mx-auto p-6 mb-12">
+    <div className="w-full mx-auto p-6 px-0 mb-12">
       <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent">
         What Our Patients Say
       </h2>
