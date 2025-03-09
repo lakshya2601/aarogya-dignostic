@@ -89,10 +89,9 @@ const HealthPackages = () => {
               {/* Mobile Static Content */}
               <div className="md:hidden absolute w-full bottom-0 bg-[#86B971] text-center px-6 py-6">
                 <div className="relative">
-                  <div className="absolute -top-16 left-0 w-full h-16 bg-[#86B971]">
+                  <div className="absolute -top-16 left-0 w-full h-16 bg-[#86B971] rounded-t-md">
                     <div className="w-full h-full bg-[#86B971] rounded-t-[50%]"></div>
                   </div>
-                  
                   <h3 className="text-xl font-bold mb-2 text-white">
                     {pkg.title}
                   </h3>
@@ -112,7 +111,7 @@ const HealthPackages = () => {
               <div className="absolute w-full transition-all duration-700 ease-in-out bottom-0 hidden md:block md:group-hover:translate-y-full md:group-hover:bottom-full bg-[#86B971] text-center px-14 py-12 z-10">
                 <div className="relative">
                   {/* Curved top edge - remains the same */}
-                  <div className="absolute -top-16 md:-top-20 left-0 w-full h-16 md:h-20 bg-[#86B971]">
+                  <div className="absolute -top-16 md:-top-20 left-0 w-full h-16 md:h-20 bg-[#86B971] rounded-t-md">
                     <div className="w-full h-full bg-[#86B971] rounded-t-[50%]"></div>
                   </div>
                   
