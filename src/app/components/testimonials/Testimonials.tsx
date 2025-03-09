@@ -94,7 +94,7 @@ const Testimonials: React.FC = () => {
         What Our Patients Say
       </h2>
       
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden h-[280px]">
         <div 
           className="flex gap-6 transition-transform duration-[2000ms] ease-linear"
           style={{
