@@ -59,8 +59,8 @@ const doctors = [
 
 const SpecialistDoctorsCarousel = () => {
   return (
-    <div className="w-[95%] mx-auto p-6 bg-white rounded-xl shadow-lg">
-      <h2 className="text-3xl font-bold mb-6 bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent">
+    <div className="w-full px-[60px] p-6">
+      <h2 className="flex justify-center text-3xl font-bold mb-6 bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent">
         Consult a Specialist Doctor
       </h2>
 

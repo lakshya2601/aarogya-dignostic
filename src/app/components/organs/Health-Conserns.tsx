@@ -96,19 +96,14 @@ const HealthConcerns = () => {
 
 
   return (
-<div className="w-[95%] mx-auto p-8 rounded-2xl bg-white shadow-xl border border-gray-100 backdrop-blur-sm">
-  <div className="flex justify-between items-center mb-8">
-    <h2 className="text-3xl font-bold bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent tracking-tight">Search by Health Concerns</h2>
+<div className="w-full mx-auto p-8">
+<div className="flex justify-center items-center mb-8 w-full">
+    <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent tracking-tight text-center">
+      Search by Health Concerns
+    </h2>
   </div>
 
-  <button
-    onClick={() => setActiveFilter('all')}
-    className="text-green-600 hover:text-green-700 px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-green-50"
-  >
-    Show All
-  </button>
-
-  <div className="mb-8 space-y-6">
+  <div className="mb-8 space-y-6 md:mx-[200px]">
     <div className="relative">
       <input
         type="text"
@@ -134,54 +129,65 @@ const HealthConcerns = () => {
         />
       </svg>
     </div>
+    
 
-    <div className="flex gap-3 md:gap-4 overflow-x-auto pb-4 hide-scrollbar">
+    <div className="flex gap-3 md:gap-4 overflow-x-auto pb-4 hide-scrollbar w-full justify-center">
       <button
         onClick={() => setActiveFilter('blood')}
-        className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${activeFilter === 'blood' ? 'bg-green-100 text-green-600 shadow-md' : 'bg-gray-50 text-gray-600 hover:bg-gray-100'}`}
+        className={`px-6 py-2.5 rounded-full text-sm transition-all duration-300 transform hover:scale-105 ${activeFilter === 'blood' ? 'bg-green-100 text-green-600 shadow-md font-bold' : 'bg-gray-50 text-gray-600 hover:bg-gray-100 font-normal'}`}
       >
         Blood Tests
       </button>
       <button
         onClick={() => setActiveFilter('hormonal')}
-        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${activeFilter === 'hormonal' ? 'bg-green-100 text-green-600' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+        className={`px-4 py-2 rounded-full text-sm transition-colors duration-200 ${activeFilter === 'hormonal' ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 font-normal'}`}
       >
         Hormonal Tests
       </button>
       <button
         onClick={() => setActiveFilter('cancer')}
-        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${activeFilter === 'cancer' ? 'bg-green-100 text-green-600' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+        className={`px-4 py-2 rounded-full text-sm transition-colors duration-200 ${activeFilter === 'cancer' ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 font-normal'}`}
       >
         Cancer Screening
       </button>
       <button
         onClick={() => setActiveFilter('infection')}
-        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${activeFilter === 'infection' ? 'bg-green-100 text-green-600' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+        className={`px-4 py-2 rounded-full text-sm transition-colors duration-200 ${activeFilter === 'infection' ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 font-normal'}`}
       >
         Infection Tests
       </button>
       <button
         onClick={() => setActiveFilter('imaging')}
-        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${activeFilter === 'imaging' ? 'bg-green-100 text-green-600' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+        className={`px-4 py-2 rounded-full text-sm transition-colors duration-200 ${activeFilter === 'imaging' ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 font-normal'}`}
       >
         Imaging Tests
       </button>
       <button
         onClick={() => setActiveFilter('specialized')}
-        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${activeFilter === 'specialized' ? 'bg-green-100 text-green-600' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+        className={`px-4 py-2 rounded-full text-sm transition-colors duration-200 ${activeFilter === 'specialized' ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 font-normal'}`}
       >
         Specialized Tests
       </button>
       <button
         onClick={() => setActiveFilter('alphabet')}
-        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${activeFilter === 'alphabet' ? 'bg-green-100 text-green-600' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+        className={`px-4 py-2 rounded-full text-sm transition-colors duration-200 ${activeFilter === 'alphabet' ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 font-normal'}`}
       >
         Alphabetical
       </button>
     </div>
   </div>
+   
+   <div className="flex justify-center w-full mb-8">
+    <button
+      onClick={() => setActiveFilter('all')}
+      className="text-green-600 hover:text-green-700 px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-green-50"
+    >
+      Show All
+    </button>
+  </div>
 
-  <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+
+  <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6  md:mx-[200px]">
     {filteredConcerns.map((concern, index) => (
       <div
         key={index}

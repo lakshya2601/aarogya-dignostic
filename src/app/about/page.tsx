@@ -109,15 +109,15 @@ const AboutPage = () => {
     : teamMembers.filter(member => member.role === activeFilter);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
     <div className="flex flex-col items-center justify-center w-full">
       <Navbar />
-      <div className="mt-[120px] w-[95%] max-w-7xl mx-auto p-6 sm:p-8 bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg relative overflow-hidden transform transition-all duration-300 hover:shadow-xl">
-        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#325818] via-[#41691b] to-[#789e1f] animate-gradient-x"></div>
+      <div className="mt-[100px] w-[95%] max-w-7xl mx-auto p-6 sm:p-8 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#325818] via-[#41691b] to-[#789e1f] animate-gradient-x rounded-t-4xl"></div>
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-[#325818]/5 via-[#41691b]/5 to-[#789e1f]/5 blur-3xl transform -skew-y-6 scale-150 animate-pulse-slow"></div>
           <div className="relative z-10">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-8 sm:mb-10 bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent text-center tracking-tight animate-gradient-x">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-8 md:h-[55px] sm:mb-10 bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent text-center tracking-tight animate-gradient-x">
               About Aarogya Diagnostic
             </h1>
             <div className="flex justify-center mb-8">
@@ -142,7 +142,7 @@ const AboutPage = () => {
               diagnostics through continuous innovation and adherence to international standards.
             </p>
           </div>
-          <div className="bg-white p-8 rounded-xl shadow-sm">
+          <div className="bg-white p-8 rounded-xl shadow-sm mt-8">
             <h2 className="text-3xl font-bold mb-6 text-[#325818] flex items-center">
               <span className="mr-3 text-2xl">✨</span> Why Choose Us?
             </h2>

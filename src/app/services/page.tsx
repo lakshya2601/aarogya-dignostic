@@ -45,11 +45,11 @@ const EmergencyServicesIcon = () => (
 
 const ServicesPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full min-h-screen bg-gray-50">
+    <div className="flex flex-col items-center justify-center w-full min-h-screen">
       <Navbar />
-      <div className="mt-[120px] w-[95%] max-w-7xl mx-auto p-6 space-y-16">
+      <div className="mt-[100px] w-[95%] max-w-7xl mx-auto p-6 pt-0 space-y-16">
         {/* Services Section */}
-        <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl p-10 relative overflow-hidden">
+        <div className="h-full inset-0 bg-gradient-to-r from-[#325818]/5 via-[#41691b]/5 to-[#789e1f]/5 rounded-2xl p-10 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#325818] via-[#41691b] to-[#789e1f]"></div>
           <div className="absolute -right-20 -top-20 w-64 h-64 bg-[#325818]/5 rounded-full blur-3xl"></div>
           <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-[#789e1f]/5 rounded-full blur-3xl"></div>
@@ -145,7 +145,7 @@ const ServicesPage = () => {
         </div>
 
         {/* Network Section */}
-        <div className="bg-white rounded-2xl shadow-xl p-10 relative overflow-hidden">
+        <div className="w-full p-10 relative overflow-hidden">
           <div className="absolute -right-20 -top-20 w-64 h-64 bg-[#325818]/5 rounded-full blur-3xl"></div>
           <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-[#789e1f]/5 rounded-full blur-3xl"></div>
           

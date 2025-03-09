@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const healthPackages = [
   {
@@ -10,6 +11,7 @@ const healthPackages = [
     oldPrice: "Rs. 4360",
     newPrice: "Rs. 1500",
     discount: "66% off",
+    image: "/photo-1617633784388-f1818619287b.jpg"  // Add image for energy package
   },
   {
     id: 2,
@@ -19,6 +21,7 @@ const healthPackages = [
     oldPrice: "Rs. 7815",
     newPrice: "Rs. 2899",
     discount: "63% off",
+    image: "/images/gym-package.jpg"  // Add image for gym package
   },
   {
     id: 3,
@@ -28,6 +31,7 @@ const healthPackages = [
     oldPrice: "Rs. 5775",
     newPrice: "Rs. 1999",
     discount: "65% off",
+    image: "/images/mens-health.jpg"  // Add image for men's health
   },
   {
     id: 4,
@@ -37,6 +41,7 @@ const healthPackages = [
     oldPrice: "Rs. 6499",
     newPrice: "Rs. 2499",
     discount: "62% off",
+    image: "/images/full-body.jpg"  // Add image for full body checkup
   },
   {
     id: 5,
@@ -46,37 +51,97 @@ const healthPackages = [
     oldPrice: "Rs. 5999",
     newPrice: "Rs. 2299",
     discount: "61% off",
+    image: "/images/heart-health.jpg"  // Add image for heart health
   }
 ];
 
 const HealthPackages = () => {
   return (
-    <div className="w-[95%] mx-auto p-4 sm:p-6 mb-[50px]">
-      <div className="flex justify-between items-center mb-8">
-        <h2 className="text-3xl font-bold bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent">Popular Health Packages</h2>
-      </div>
+    <div className="content-wrapper w-full bg-[#F0F8E1] py-12">
+      <div className="w-full px-4 md:px-6 lg:px-9">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl font-bold text-[#1F1D42]">
+            Popular Health Packages
+          </h2>
+        </motion.div>
 
-      {/* Scrollable Container with Hidden Scrollbar */}
-      <div className="flex gap-3 sm:gap-4 overflow-x-auto pb-4 scrollbar-hide">
-        {healthPackages.map((pkg) => (
-          <div key={pkg.id} className="bg-white rounded-xl shadow-lg p-6 w-[280px] sm:w-72 flex-shrink-0 border border-gray-100 relative hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col min-h-[380px]">
-            <div className="absolute top-4 left-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs px-3 py-1.5 rounded-lg font-semibold transform group-hover:scale-105 transition-transform duration-300">
-              {pkg.discount}
-            </div>
-            <div className="flex-1">
-              <h3 className="text-[#325818] font-bold text-xl mt-6 group-hover:text-[#41691b] transition-colors duration-300">{pkg.title}</h3>
-              <p className="text-sm text-[#789e1f] font-medium">{pkg.tests}</p>
-              <p className="text-sm text-gray-600 mt-3 group-hover:text-gray-700 transition-colors duration-300">{pkg.description}</p>
-            </div>
-            <div className="mt-4">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <p className="text-gray-400 text-sm line-through">{pkg.oldPrice}</p>
-                <p className="text-[#325818] text-2xl font-bold group-hover:text-[#41691b] transition-colors duration-300">{pkg.newPrice}</p>
+        <div className="flex gap-8 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+          {healthPackages.map((pkg) => (
+            <div
+              key={pkg.id}
+              className="relative w-[300px] md:w-[360px] h-[500px] md:h-[500px] overflow-hidden rounded-2xl group bg-white shadow-lg flex-shrink-0"
+            >
+              {/* Background Image */}
+              <div className="absolute inset-0 md:transition-transform md:duration-700 md:ease-in-out md:group-hover:scale-100 md:scale-110">
+                <Image
+                  src={pkg.image}
+                  alt={pkg.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
-              <button className="w-full py-2 px-4 bg-gradient-to-r from-[#325818] to-[#789e1f] text-white rounded-lg font-medium opacity-90 hover:opacity-100 transition-opacity duration-300">Book Now</button>
+
+              {/* Mobile Static Content */}
+              <div className="md:hidden absolute w-full bottom-0 bg-[#86B971] text-center px-6 py-6">
+                <div className="relative">
+                  <div className="absolute -top-16 left-0 w-full h-16 bg-[#86B971]">
+                    <div className="w-full h-full bg-[#86B971] rounded-t-[50%]"></div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold mb-2 text-white">
+                    {pkg.title}
+                  </h3>
+                  <p className="text-sm text-white/90 mb-2">{pkg.tests}</p>
+                  <p className="text-xs mb-3 text-white/80">{pkg.description}</p>
+                  <div className="flex items-center justify-center gap-3 mb-2">
+                    <span className="line-through text-sm text-white/60">{pkg.oldPrice}</span>
+                    <span className="text-lg font-bold text-white">{pkg.newPrice}</span>
+                  </div>
+                  <p className="text-sm font-semibold text-[#2d7f0b]">
+                    Save {pkg.discount} Today!
+                  </p>
+                </div>
+              </div>
+
+              {/* Desktop Content with Hover - remains the same */}
+              <div className="absolute w-full transition-all duration-700 ease-in-out bottom-0 hidden md:block md:group-hover:translate-y-full md:group-hover:bottom-full bg-[#86B971] text-center px-14 py-12 z-10">
+                <div className="relative">
+                  {/* Curved top edge - remains the same */}
+                  <div className="absolute -top-16 md:-top-20 left-0 w-full h-16 md:h-20 bg-[#86B971]">
+                    <div className="w-full h-full bg-[#86B971] rounded-t-[50%]"></div>
+                  </div>
+                  
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4 text-white">
+                    {pkg.title}
+                  </h3>
+                  <p className="text-sm text-white/90 mb-2">{pkg.tests}</p>
+                  <div className="flex items-center justify-center gap-3">
+                    <span className="line-through text-sm text-white/60">{pkg.oldPrice}</span>
+                    <span className="text-lg font-bold text-white">{pkg.newPrice}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Extra Content (Shows on Hover - Hidden on Mobile) */}
+              <div className="absolute bottom-0 w-full h-1/2 bg-[#86B971] hidden md:flex items-center justify-center flex-col p-6 text-[#dee8c2] transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 z-0">
+                <p className="text-sm text-white/80 mb-4">{pkg.description}</p>
+                <h4 className="text-xl text-center">
+                  Save <span className="text-[#2d7f0b]">{pkg.discount}</span> Today!
+                </h4>
+              </div>
+
+              {/* Discount Badge - remains the same */}
+              <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                {pkg.discount}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
