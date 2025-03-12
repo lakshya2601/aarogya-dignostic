@@ -13,57 +13,57 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Rajesh Kumar",
+    name: "रवि वर्मा",
     image: "/testimonial1.jpg",
-    text: "Excellent service and very professional staff. The home collection service was very convenient, and I received my reports on time.",
+    text: "सेवा उत्कृष्ट थी और स्टाफ बहुत ही सहयोगी था। होम सैंपल कलेक्शन की सुविधा ने इसे और भी आसान बना दिया।",
     rating: 5,
     date: "2024-03-10",
-    service: "Full Body Checkup"
+    service: "संपूर्ण स्वास्थ्य जाँच"
   },
   {
     id: 2,
-    name: "Priya Sharma",
+    name: "सुषमा त्रिपाठी",
     image: "/testimonial2.jpg",
-    text: "Very satisfied with the quality of service. The staff was courteous and the facility was clean and well-maintained.",
+    text: "परिणाम समय पर और सटीक मिले। स्टाफ बहुत ही पेशेवर और सहायक था।",
     rating: 5,
     date: "2024-03-08",
-    service: "Diabetes Screening"
+    service: "मधुमेह परीक्षण"
   },
   {
     id: 3,
-    name: "Amit Patel",
+    name: "अर्जुन राठौर",
     image: "/testimonial3.jpg",
-    text: "Prompt service and accurate results. The online report access feature is very convenient. Highly recommended!",
+    text: "क्लिनिक बहुत साफ-सुथरा था और रिपोर्ट समय पर मिली। ऑनलाइन रिपोर्ट एक्सेस करना बहुत आसान था।",
     rating: 4,
     date: "2024-03-05",
-    service: "Thyroid Profile"
+    service: "थायरॉइड प्रोफाइल"
   },
   {
     id: 4,
-    name: "Meera Reddy",
+    name: "नीता वर्मा",
     image: "/testimonial4.jpg",
-    text: "The diagnostic center's attention to detail and professionalism is commendable. Their state-of-the-art equipment and expert technicians ensure reliable results.",
+    text: "डायग्नोस्टिक सेंटर की सेवाएं बहुत ही अच्छी थीं। कर्मचारी मददगार और अनुभवी थे।",
     rating: 5,
     date: "2024-03-03",
-    service: "MRI Scan"
+    service: "एमआरआई स्कैन"
   },
   {
     id: 5,
-    name: "Suresh Menon",
+    name: "विक्रम चौहान",
     image: "/testimonial5.jpg",
-    text: "Excellent experience with the home collection service. The phlebotomist was skilled and professional. Got my reports within the promised time.",
+    text: "होम कलेक्शन सेवा बहुत सुविधाजनक रही। रिपोर्ट भी सही समय पर मिली।",
     rating: 5,
     date: "2024-03-01",
-    service: "Blood Tests"
+    service: "रक्त परीक्षण"
   },
   {
     id: 6,
-    name: "Anita Singh",
+    name: "आरती शर्मा",
     image: "/testimonial6.jpg",
-    text: "Very impressed with their online booking system and report delivery. The entire process was smooth and hassle-free.",
+    text: "पूरी प्रक्रिया बहुत सहज और व्यवस्थित थी। बुकिंग से लेकर रिपोर्ट प्राप्त करने तक कोई समस्या नहीं हुई।",
     rating: 4,
     date: "2024-02-28",
-    service: "Health Package"
+    service: "स्वास्थ्य पैकेज"
   }
 ];
 
@@ -76,22 +76,22 @@ const Testimonials: React.FC = () => {
     const scrollInterval = setInterval(() => {
       if (!isPaused) {
         setPosition((prevPosition) => {
-          const nextPosition = prevPosition + 0.02; // Reduced from 0.05 to 0.02
+          const nextPosition = prevPosition + 0.02;
           if (nextPosition >= 100) {
             return 0;
           }
           return nextPosition;
         });
       }
-    }, 20); // Increased from 10 to 20 milliseconds
+    }, 20);
 
     return () => clearInterval(scrollInterval);
   }, [isPaused]);
 
   return (
-    <div className="w-full mx-auto p-6 px-0 mb-12">
+    <div className="p-6 px-0 mx-auto mb-12 w-full">
       <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent">
-        What Our Patients Say
+        हमारे रोगियों के अनुभव
       </h2>
       
       <div className="relative overflow-hidden h-[280px]">
@@ -110,16 +110,16 @@ const Testimonials: React.FC = () => {
             className="flex-shrink-0 w-[400px] bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
           >
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-full mr-4 flex items-center justify-center text-green-600">
+              <div className="flex justify-center items-center mr-4 w-12 h-12 text-green-600 bg-gradient-to-br from-green-100 to-green-200 rounded-full">
                 <span className="text-lg font-semibold">{testimonial.name.charAt(0)}</span>
               </div>
               <div>
-                <h3 className="font-semibold text-lg text-gray-800">{testimonial.name}</h3>
+                <h3 className="text-lg font-semibold text-gray-800">{testimonial.name}</h3>
                 <p className="text-sm text-green-600">{testimonial.service}</p>
               </div>
             </div>
             
-            <div className="mb-4 flex">
+            <div className="flex mb-4">
               {[...Array(5)].map((_, index) => (
                 <span 
                   key={index} 
@@ -130,10 +130,10 @@ const Testimonials: React.FC = () => {
               ))}
             </div>
             
-            <p className="text-gray-600 mb-4 line-clamp-3 italic">{testimonial.text}</p>
+            <p className="mb-4 italic text-gray-600 line-clamp-3">{testimonial.text}</p>
             
             <div className="text-sm text-gray-400">
-              {new Date(testimonial.date).toLocaleDateString('en-US', {
+              {new Date(testimonial.date).toLocaleDateString('hi-IN', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
