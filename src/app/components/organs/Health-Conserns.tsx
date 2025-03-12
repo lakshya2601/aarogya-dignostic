@@ -1,87 +1,121 @@
-import React, { useState } from 'react';
+"use client"
+import React, { useState } from "react";
+import { AntiBodyIcon, ArthritisIcon, BloodCellIcon, BloodClottingIcon, BloodGroupIcon, BloodSugarLevel, BoneMarrowIcon, BrainIcon, CaIcon, CancerIcon, ChikungunyaIcon, CholesterolIcon, DiabetsIcon, EnzymeIcon, GeneticIcon, HeartIcon, HemoglobinIcon, HepatitsBIcon, HepatitsCIcon, HepatitsEIcon, HIVIcon, KidneyIcon, LabTestIcon, LiverFunctionIcon, LiverIcon, LungIcon, PaleLiverIcon, PancreasIcon, PregnancyIcon, StoolIcon, SurgicalIcon, TBIcon, ThroatIcon, TyphoidIcon, UrineTestIcon, VitaminB12Icon, VitaminD3Icon, XRayIcon } from "../icons";
+
+
+
 
 const HealthConcerns = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeFilter, setActiveFilter] = useState("all");
 
-  const concerns = [
-    // Blood Tests
-    { name: 'Complete Blood Count', icon: '🩸', type: 'blood', description: 'Basic blood cell analysis' },
-    { name: 'Blood Sugar Test', icon: '📊', type: 'blood', description: 'Glucose level measurement' },
-    { name: 'Hemoglobin Test', icon: '🔴', type: 'blood', description: 'Hb level check' },
-    { name: 'Lipid Profile', icon: '💉', type: 'blood', description: 'Cholesterol and triglycerides test' },
-    { name: 'Liver Function', icon: '🫁', type: 'blood', description: 'Liver enzyme analysis' },
-    { name: 'Kidney Function', icon: '🫘', type: 'blood', description: 'Renal function assessment' },
-    { name: 'Thyroid Profile', icon: '⚕️', type: 'blood', description: 'T3, T4, TSH analysis' },
-    { name: 'HbA1c Test', icon: '📈', type: 'blood', description: 'Glycated hemoglobin test' },
-    { name: 'Electrolytes Test', icon: '⚡', type: 'blood', description: 'Na, K, Cl levels' },
-    { name: 'CRP Test', icon: '🔬', type: 'blood', description: 'Inflammation marker' },
-    { name: 'ESR Test', icon: '📊', type: 'blood', description: 'Inflammation indicator' },
-    { name: 'Vitamin Tests', icon: '💊', type: 'blood', description: 'Vitamin D & B12 levels' },
-    { name: 'Iron Profile', icon: '🔋', type: 'blood', description: 'Iron deficiency check' },
-    { name: 'D-Dimer Test', icon: '🔬', type: 'blood', description: 'Blood clot test' },
-    { name: 'PT & INR', icon: '⏱️', type: 'blood', description: 'Blood clotting time' },
+  
+
+  
+   const concerns = [
+      // Blood Tests
+      { name: "Albumin", icon: LabTestIcon, type: "blood", description: "Protein level analysis", marketRate: 100, arogyaRate: 50 },
+      { name: "Alkaline Phosphatase", icon: LiverIcon, type: "blood", description: "Liver and bone health", marketRate: 200, arogyaRate: 100 },
+      { name: "Ammonia", icon: LiverFunctionIcon, type: "blood", description: "Liver function test", marketRate: 800, arogyaRate: 400 },
+      { name: "Amylase", icon: PancreasIcon, type: "blood", description: "Pancreatic enzyme test", marketRate: 450, arogyaRate: 225 },
+      { name: "Anti HCV", icon: HepatitsCIcon, type: "blood", description: "Hepatitis C test", marketRate: 800, arogyaRate: 400 },
+      { name: "Anti HEV", icon: HepatitsEIcon, type: "blood", description: "Hepatitis E test", marketRate: 800, arogyaRate: 400 },
+      { name: "Anti TPO", icon: AntiBodyIcon, type: "blood", description: "Thyroid antibody test", marketRate: 1000, arogyaRate: 500 },
+      { name: "APTT", icon: BloodClottingIcon, type: "blood", description: "Blood clotting test", marketRate: 400, arogyaRate: 200 },
+      { name: "ASO Titre", icon: ThroatIcon, type: "blood", description: "Streptococcus infection test", marketRate: 300, arogyaRate: 150 },
+      { name: "Beta HCG", icon: PregnancyIcon, type: "hormonal", description: "Pregnancy test", marketRate: 1000, arogyaRate: 500 },
+      { name: "Bilirubin", icon: PaleLiverIcon, type: "blood", description: "Jaundice indicator", marketRate: 180, arogyaRate: 90 },
+      { name: "Bleeding Time (BT)", icon: BloodClottingIcon, type: "blood", description: "Blood clotting test", marketRate: 50, arogyaRate: 25 },
+      { name: "Blood Group", icon: BloodGroupIcon, type: "blood", description: "Blood type determination", marketRate: 50, arogyaRate: 25 },
+      { name: "Blood Sugar FBS", icon: BloodSugarLevel, type: "blood", description: "Fasting blood sugar", marketRate: 50, arogyaRate: 25 },
+      { name: "Blood Sugar PPBS", icon: BloodSugarLevel, type: "blood", description: "Postprandial blood sugar", marketRate: 50, arogyaRate: 25 },
+      { name: "Blood Sugar RBS", icon: BloodSugarLevel, type: "blood", description: "Random blood sugar", marketRate: 50, arogyaRate: 25 },
+      { name: "Blood Urea", icon: KidneyIcon, type: "blood", description: "Kidney function test", marketRate: 130, arogyaRate: 65 },
+      { name: "BUN (Blood Urea Nitrogen)", icon: KidneyIcon, type: "blood", description: "Kidney function test", marketRate: 150, arogyaRate: 75 },
+      { name: "Calcium", icon: CaIcon, type: "blood", description: "Calcium levels", marketRate: 180, arogyaRate: 90 },
+      { name: "Chikungunya Test IgM", icon: ChikungunyaIcon, type: "infection", description: "Chikungunya virus test", marketRate: 1500, arogyaRate: 750 },
+      { name: "Clotting Time (CT)", icon: BloodClottingIcon, type: "blood", description: "Blood clotting test", marketRate: 50, arogyaRate: 25 },
+      { name: "CPK", icon: LabTestIcon, type: "blood", description: "Creatine phosphokinase test", marketRate: 400, arogyaRate: 200 },
+      { name: "CPK-MB", icon: HeartIcon, type: "blood", description: "Cardiac enzyme test", marketRate: 500, arogyaRate: 250 },
+      { name: "Creatinine", icon: KidneyIcon, type: "blood", description: "Kidney function test", marketRate: 130, arogyaRate: 65 },
+      { name: "CRP (Qualitative)", icon: LabTestIcon, type: "blood", description: "Inflammation test", marketRate: 280, arogyaRate: 140 },
+      { name: "CRP (Quantitative)", icon: LabTestIcon, type: "blood", description: "Inflammation marker", marketRate: 400, arogyaRate: 200 },
+      { name: "Dengue IgG, IgM, NS1", icon: ChikungunyaIcon, type: "infection", description: "Dengue detection", marketRate: 900, arogyaRate: 450 },
+      { name: "Electrolytes (NA, K, CL)", icon: LabTestIcon, type: "blood", description: "Electrolyte balance", marketRate: 350, arogyaRate: 175 },
+      { name: "ESR", icon: LabTestIcon, type: "blood", description: "Inflammation marker", marketRate: 60, arogyaRate: 30 },
+      { name: "G6PD (Qualitative)", icon: EnzymeIcon, type: "blood", description: "Enzyme deficiency test", marketRate: 300, arogyaRate: 150 },
+      { name: "GAMMA GT", icon: LiverIcon, type: "blood", description: "Liver function test", marketRate: 400, arogyaRate: 200 },
+      { name: "Glucose Tolerance Test 3", icon: DiabetsIcon, type: "blood", description: "Diabetes test", marketRate: 180, arogyaRate: 90 },
+      { name: "Glucose Tolerance Test 5", icon: DiabetsIcon, type: "blood", description: "Diabetes test", marketRate: 260, arogyaRate: 130 },
+      { name: "Haemoglobin (Hb)", icon: LabTestIcon, type: "blood", description: "Anemia test", marketRate: 100, arogyaRate: 50 },
+      { name: "HB, T&D", icon: HemoglobinIcon, type: "blood", description: "Hemoglobin with typing", marketRate: 160, arogyaRate: 80 },
+      { name: "HBA1C", icon: DiabetsIcon, type: "blood", description: "Diabetes monitoring", marketRate: 600, arogyaRate: 300 },
+      { name: "HBsAG (ANTIGEN)", icon: HepatitsBIcon, type: "infection", description: "Hepatitis B test", marketRate: 600, arogyaRate: 300 },
+      { name: "HBsAG (CARD)", icon: HepatitsBIcon, type: "infection", description: "Hepatitis B rapid test", marketRate: 260, arogyaRate: 130 },
+      { name: "HIV 1&2", icon: HIVIcon, type: "infection", description: "HIV test", marketRate: 260, arogyaRate: 130 },
+      { name: "IONIZED CALCIUM", icon: CaIcon, type: "blood", description: "Active calcium test", marketRate: 200, arogyaRate: 100 },
+      { name: "LIPASE", icon: PancreasIcon, type: "blood", description: "Pancreatic enzyme test", marketRate: 450, arogyaRate: 225 },
+      { name: "Lipid Profile", icon: CholesterolIcon, type: "blood", description: "Cholesterol test", marketRate: 500, arogyaRate: 250 },
+      { name: "Liver Function Test (LFT)", icon: LiverIcon, type: "blood", description: "Liver health panel", marketRate: 550, arogyaRate: 275 },
+      { name: "Malaria Parasite (MP)", icon: ChikungunyaIcon, type: "infection", description: "Malaria test", marketRate: 80, arogyaRate: 40 },
+      { name: "MT Test", icon: TBIcon, type: "infection", description: "Tuberculosis test", marketRate: 100, arogyaRate: 50 },
+      { name: "Peripheral Smear", icon: BloodCellIcon, type: "blood", description: "Blood cell analysis", marketRate: 250, arogyaRate: 125 },
+      { name: "Phosphorus", icon: LabTestIcon, type: "blood", description: "Phosphate level test", marketRate: 250, arogyaRate: 125 },
+      { name: "Platelet Count", icon: BloodClottingIcon, type: "blood", description: "Blood clotting component", marketRate: 140, arogyaRate: 70 },
+      { name: "Potassium (K+)", icon: LabTestIcon, type: "blood", description: "Electrolyte test", marketRate: 200, arogyaRate: 100 },
+      { name: "PT (Prothrombin Time)", icon: BloodClottingIcon, type: "blood", description: "Blood clotting test", marketRate: 260, arogyaRate: 130 },
+      { name: "RA (Qualitative)", icon: ArthritisIcon, type: "blood", description: "Rheumatoid arthritis test", marketRate: 180, arogyaRate: 90 },
+      { name: "RA (Quantitative)", icon: LabTestIcon, type: "blood", description: "Rheumatoid factor test", marketRate: 400, arogyaRate: 200 },
+      { name: "Renal Profile (RFT)", icon: KidneyIcon, type: "blood", description: "Kidney function panel", marketRate: 550, arogyaRate: 275 },
+      { name: "Reticulocyte Count", icon: BoneMarrowIcon, type: "blood", description: "Bone marrow function test", marketRate: 300, arogyaRate: 150 },
+      { name: "Semen Analysis", icon: LabTestIcon, type: "specialized", description: "Fertility test", marketRate: 300, arogyaRate: 150 },
+      { name: "SGOT (AST)", icon: LiverIcon, type: "blood", description: "Liver enzyme test", marketRate: 150, arogyaRate: 75 },
+      { name: "SGPT (ALT)", icon: LiverIcon, type: "blood", description: "Liver enzyme test", marketRate: 150, arogyaRate: 75 },
+      { name: "Sickling Test", icon: LabTestIcon, type: "blood", description: "Sickle cell test", marketRate: 250, arogyaRate: 125 },
+      { name: "Sodium (NA+)", icon: LabTestIcon, type: "blood", description: "Electrolyte test", marketRate: 200, arogyaRate: 100 },
+      { name: "Sputum (GRAM & AFB)", icon: TBIcon, type: "infection", description: "Respiratory infection test", marketRate: 300, arogyaRate: 150 },
+      { name: "Sputum for AFB", icon: TBIcon, type: "infection", description: "TB bacteria test", marketRate: 250, arogyaRate: 125 },
+      { name: "Stool", icon: StoolIcon, type: "specialized", description: "Stool examination", marketRate: 150, arogyaRate: 75 },
+      { name: "T&D", icon: BloodCellIcon, type: "blood", description: " Bilirubin levels in the blood", marketRate: 120, arogyaRate: 60 },
+      { name: "CBC (Complete Blood Count)", icon: LabTestIcon, type: "blood", description: "General blood health check", marketRate: 250, arogyaRate: 125 },
+      { name: "Total Cholesterol", icon: CholesterolIcon, type: "blood", description: "Cholesterol test", marketRate: 150, arogyaRate: 75 },
+      { name: "Total Proteins", icon: LabTestIcon, type: "blood", description: "Protein level test", marketRate: 180, arogyaRate: 90 },
+      { name: "Uric Acid", icon: KidneyIcon, type: "blood", description: "Gout and kidney function test", marketRate: 150, arogyaRate: 75 },
+      { name: "Urine Albumin", icon: KidneyIcon, type: "urine", description: "Kidney function test", marketRate: 50, arogyaRate: 25 },
+      { name: "Urine Examination", icon: UrineTestIcon, type: "urine", description: "Urinalysis", marketRate: 50, arogyaRate: 25 },
+      { name: "Urine Ketone", icon: DiabetsIcon, type: "urine", description: "Diabetes screening", marketRate: 50, arogyaRate: 25 },
+      { name: "Urine Sugar FBS", icon: UrineTestIcon, type: "urine", description: "Fasting urine glucose", marketRate: 30, arogyaRate: 15 },
+      { name: "Urine Sugar PPBS", icon: UrineTestIcon, type: "urine", description: "Postprandial urine glucose", marketRate: 30, arogyaRate: 15 },
+      { name: "VDRL (Syphilis)", icon: LabTestIcon, type: "infection", description: "Syphilis test", marketRate: 200, arogyaRate: 100 },
+      { name: "Widal Test", icon: TyphoidIcon, type: "infection", description: "Typhoid test", marketRate: 150, arogyaRate: 75 },
+      { name: "X-Ray", icon: XRayIcon, type: "imaging", description: "Internal analysis", marketRate: 400, arogyaRate: 200 },
+      // Hormonal Tests
+      { name: "Thyroid Test", icon: ThroatIcon, type: "hormonal", description: "T3, T4, TSH levels", marketRate: 500, arogyaRate: 250 },
+      { name: "Vitamin B12", icon: VitaminB12Icon, type: "hormonal", description: "Vitamin B12 levels", marketRate: 1000, arogyaRate: 500 },
+      { name: "Vitamin D3", icon: VitaminD3Icon, type: "hormonal", description: "Vitamin D levels", marketRate: 2000, arogyaRate: 1000 },
+      { name: "Free TFT", icon: ThroatIcon, type: "hormonal", description: "Thyroid function test", marketRate: 700, arogyaRate: 350 },
     
-    // Hormonal Tests
-    { name: 'Insulin Test', icon: '📈', type: 'hormonal', description: 'Insulin level measurement' },
-    { name: 'Cortisol', icon: '⚡', type: 'hormonal', description: 'Stress hormone analysis' },
-    { name: 'Prolactin', icon: '👶', type: 'hormonal', description: 'Milk hormone test' },
-    { name: 'Testosterone', icon: '🔄', type: 'hormonal', description: 'Male hormone test' },
-    { name: 'Estrogen', icon: '♀️', type: 'hormonal', description: 'Female hormone test' },
-    { name: 'FSH', icon: '🔬', type: 'hormonal', description: 'Fertility hormone' },
-    { name: 'LH', icon: '🔬', type: 'hormonal', description: 'Ovulation hormone' },
-    
-    // Cancer Screening
-    { name: 'PSA Test', icon: '🎗️', type: 'cancer', description: 'Prostate cancer screening' },
-    { name: 'CA-125', icon: '🔍', type: 'cancer', description: 'Ovarian cancer marker' },
-    { name: 'CA 19-9', icon: '🔬', type: 'cancer', description: 'Pancreatic cancer marker' },
-    { name: 'CEA Test', icon: '🔬', type: 'cancer', description: 'Cancer antigen test' },
-    { name: 'PAP Smear', icon: '🔬', type: 'cancer', description: 'Cervical cancer screening' },
-    { name: 'BRCA Test', icon: '🧬', type: 'cancer', description: 'Breast cancer gene test' },
-    
-    // Infection Tests
-    { name: 'COVID-19', icon: '🦠', type: 'infection', description: 'RTPCR & Antigen test' },
-    { name: 'Dengue', icon: '🦟', type: 'infection', description: 'NS1 Antigen test' },
-    { name: 'Malaria', icon: '🦟', type: 'infection', description: 'Parasite detection' },
-    { name: 'Typhoid', icon: '🔬', type: 'infection', description: 'Widal test' },
-    { name: 'HIV', icon: '🔬', type: 'infection', description: 'AIDS screening test' },
-    { name: 'Hepatitis', icon: '🔬', type: 'infection', description: 'HBV & HCV screening' },
-    { name: 'TB Test', icon: '🫁', type: 'infection', description: 'Tuberculosis screening' },
-    
-    // Imaging Tests
-    { name: 'X-Ray', icon: '📸', type: 'imaging', description: 'Radiological imaging' },
-    { name: 'Ultrasound', icon: '🔊', type: 'imaging', description: 'Sound wave imaging' },
-    { name: 'MRI Scan', icon: '🔄', type: 'imaging', description: 'Magnetic resonance imaging' },
-    { name: 'CT Scan', icon: '🖥️', type: 'imaging', description: '3D body scanning' },
-    { name: 'Mammography', icon: '📷', type: 'imaging', description: 'Breast imaging' },
-    { name: 'ECG', icon: '❤️', type: 'imaging', description: 'Heart activity recording' },
-    { name: 'Echo', icon: '💓', type: 'imaging', description: 'Heart ultrasound' },
-    { name: 'TMT', icon: '🏃', type: 'imaging', description: 'Stress test' },
-    
-    // Specialized Tests
-    { name: 'BMD', icon: '🦴', type: 'specialized', description: 'Bone density scan' },
-    { name: 'PFT', icon: '🫁', type: 'specialized', description: 'Lung function test' },
-    { name: 'Sleep Study', icon: '😴', type: 'specialized', description: 'Sleep pattern analysis' },
-    { name: 'Holter Monitor', icon: '📱', type: 'specialized', description: '24-hr heart monitoring' },
-    { name: 'Allergy Panel', icon: '🤧', type: 'specialized', description: 'Allergy testing' },
-    { name: 'Genetic Tests', icon: '🧬', type: 'specialized', description: 'DNA analysis' }
+      // Specialized Tests
+      { name: "PFT (Pulmonary Function Test)", icon: LungIcon, type: "specialized", description: "Lung function test", marketRate: 800, arogyaRate: 400 },
+      { name: "EEG", icon: BrainIcon, type: "specialized", description: "Brain activity test", marketRate: 2000, arogyaRate: 1000 },
+      { name: "HLA B-27", icon: GeneticIcon, type: "specialized", description: "Genetic marker test", marketRate: 2600, arogyaRate: 1300 },
+      { name: "CA – 125", icon: CancerIcon, type: "specialized", description: "Ovarian cancer marker", marketRate: 1600, arogyaRate: 800 },
+      { name: "Surgical Profile", icon: SurgicalIcon, type: "specialized", description: "Pre-surgical tests", marketRate: 700, arogyaRate: 350 },
+      { name: "Anc Profile", icon: PregnancyIcon, type: "specialized", description: "Antenatal checkup", marketRate: 600, arogyaRate: 300 }
   ];
+  
+  
 
   const getFilteredAndSortedConcerns = () => {
     let filtered = concerns;
-    
-    // Apply type filter
-    if (activeFilter !== 'all' && activeFilter !== 'alphabet') {
-      filtered = concerns.filter(concern => concern.type === activeFilter);
+
+    if (activeFilter !== "all" && activeFilter !== "alphabet") {
+      filtered = concerns.filter((concern) => concern.type === activeFilter);
     }
 
-    // Apply search filter
-    filtered = filtered.filter(concern =>
-      concern.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    filtered = filtered.filter((concern) => concern.name.toLowerCase().includes(searchQuery.toLowerCase()));
 
-    // Apply alphabetical sorting if needed
-    if (activeFilter === 'alphabet') {
+    if (activeFilter === "alphabet") {
       filtered = [...filtered].sort((a, b) => a.name.localeCompare(b.name));
     }
 
@@ -90,117 +124,71 @@ const HealthConcerns = () => {
 
   const filteredConcerns = getFilteredAndSortedConcerns();
 
-
-
-
-
-
   return (
-<div className="w-full mx-auto p-8">
-<div className="flex justify-center items-center mb-8 w-full">
-    <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent tracking-tight text-center">
-      Search by Health Concerns
-    </h2>
-  </div>
-
-  <div className="mb-8 space-y-6 md:mx-[200px]">
-    <div className="relative">
-      <input
-        type="text"
-        placeholder="Search Test"
-        value={searchQuery}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
-        className="w-full px-6 py-4 pl-12 pr-4 rounded-xl border-2 border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-base transition-all duration-300 placeholder-gray-400 hover:border-green-300"
-      />
-      <svg
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 transition-colors duration-300 group-hover:text-green-500"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M19 19L13.8 13.8M16 8.5C16 12.6421 12.6421 16 8.5 16C4.35786 16 1 12.6421 1 8.5C1 4.35786 4.35786 1 8.5 1C12.6421 1 16 4.35786 16 8.5Z"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </div>
-    
-
-    <div className="flex gap-3 md:gap-4 overflow-x-auto pb-4 hide-scrollbar w-full justify-center">
-      <button
-        onClick={() => setActiveFilter('blood')}
-        className={`px-6 py-2.5 rounded-full text-sm transition-all duration-300 transform hover:scale-105 ${activeFilter === 'blood' ? 'bg-green-100 text-green-600 shadow-md font-bold' : 'bg-gray-50 text-gray-600 hover:bg-gray-100 font-normal'}`}
-      >
-        Blood Tests
-      </button>
-      <button
-        onClick={() => setActiveFilter('hormonal')}
-        className={`px-4 py-2 rounded-full text-sm transition-colors duration-200 ${activeFilter === 'hormonal' ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 font-normal'}`}
-      >
-        Hormonal Tests
-      </button>
-      <button
-        onClick={() => setActiveFilter('cancer')}
-        className={`px-4 py-2 rounded-full text-sm transition-colors duration-200 ${activeFilter === 'cancer' ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 font-normal'}`}
-      >
-        Cancer Screening
-      </button>
-      <button
-        onClick={() => setActiveFilter('infection')}
-        className={`px-4 py-2 rounded-full text-sm transition-colors duration-200 ${activeFilter === 'infection' ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 font-normal'}`}
-      >
-        Infection Tests
-      </button>
-      <button
-        onClick={() => setActiveFilter('imaging')}
-        className={`px-4 py-2 rounded-full text-sm transition-colors duration-200 ${activeFilter === 'imaging' ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 font-normal'}`}
-      >
-        Imaging Tests
-      </button>
-      <button
-        onClick={() => setActiveFilter('specialized')}
-        className={`px-4 py-2 rounded-full text-sm transition-colors duration-200 ${activeFilter === 'specialized' ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 font-normal'}`}
-      >
-        Specialized Tests
-      </button>
-      <button
-        onClick={() => setActiveFilter('alphabet')}
-        className={`px-4 py-2 rounded-full text-sm transition-colors duration-200 ${activeFilter === 'alphabet' ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 font-normal'}`}
-      >
-        Alphabetical
-      </button>
-    </div>
-  </div>
-   
-   <div className="flex justify-center w-full mb-8">
-    <button
-      onClick={() => setActiveFilter('all')}
-      className="text-green-600 hover:text-green-700 px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-green-50"
-    >
-      Show All
-    </button>
-  </div>
-
-
-  <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6  md:mx-[200px]">
-    {filteredConcerns.map((concern, index) => (
-      <div
-        key={index}
-        className="bg-white p-4 md:p-5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center text-center space-y-2 md:space-y-3 border border-gray-100 cursor-pointer group hover:scale-105 hover:border-green-100"
-      >
-        <span className="text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-300">{concern.icon}</span>
-        <span className="text-sm md:text-base font-medium text-gray-700 group-hover:text-green-600 transition-colors duration-300">{concern.name}</span>
-        <p className="text-xs md:text-sm text-gray-500 mt-1 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">{concern.description}</p>
+    <div className="p-8 mx-auto w-full">
+      <div className="flex justify-center items-center mb-8 w-full">
+        <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent tracking-tight text-center flex items-center gap-2">
+          Search by Health Concerns
+        </h2>
       </div>
-    ))}
-  </div>
-</div>
-    
+
+      {/* Search input adjustments for mobile */}
+      <div className="mb-6 mx-4 md:mx-[180px]">
+        <input
+          type="text"
+          placeholder="Search Test"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="px-4 py-3 w-full rounded-xl border-2 border-gray-200 md:px-6 md:py-4 focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+      </div>
+
+      {/* Filter buttons scroll container */}
+      <div className="flex overflow-x-auto gap-2 justify-start px-4 pb-4 w-full md:gap-3 md:justify-center md:px-0 scrollbar-hide">
+        {[
+          'all',
+          'blood',
+          'hormonal',
+          'infection',
+          'imaging',
+          'specialized',
+          'urine',
+          'alphabet'
+        ].map((filter) => (
+          <button
+            key={filter}
+            onClick={() => setActiveFilter(filter)}
+            className={`px-3 py-1.5 rounded-full text-xs whitespace-nowrap transition-all md:px-4 md:py-2 md:text-sm ${
+              activeFilter === filter ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            }`}
+          >
+            {filter === 'all' ? 'All Tests' : 
+             filter === 'alphabet' ? 'Alphabetical' : 
+             `${filter.charAt(0).toUpperCase() + filter.slice(1)} Tests`}
+          </button>
+        ))}
+      </div>
+
+      {/* Grid container */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-6 mx-4 md:mx-[100px]">
+        {filteredConcerns.slice(0, window.innerWidth < 640 ? 4 : undefined).map((concern, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center p-3 text-center bg-white rounded-xl border border-gray-100 shadow-sm transition-all duration-300 cursor-pointer md:p-4 md:rounded-2xl hover:shadow-md group hover:scale-102"
+          >
+            <div className="mb-2 scale-75 md:scale-100">
+              {concern.icon && <concern.icon />}
+            </div>
+            <span className="mb-1 text-xs font-semibold text-gray-800 md:text-sm group-hover:text-green-600 line-clamp-2">{concern.name}</span>
+            <p className="text-[10px] md:text-[11px] text-gray-500 mb-2 line-clamp-1">{concern.description}</p>
+            <div className="flex flex-col items-center">
+              <p className="text-[9px] md:text-[10px] text-gray-400 line-through">MRP: ₹{concern.marketRate}</p>
+              <p className="text-xs font-bold text-green-600 md:text-sm">Arogya: ₹{concern.arogyaRate}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
