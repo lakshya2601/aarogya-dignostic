@@ -176,7 +176,7 @@ const HealthConcerns = () => {
             key={index}
             className="flex flex-col items-center p-3 text-center bg-white rounded-xl border border-gray-100 shadow-sm transition-all duration-300 cursor-pointer md:p-4 md:rounded-2xl hover:shadow-md group hover:scale-102"
           >
-            <div className="mb-2 scale-75 md:scale-100">
+            <div className="mb-2 transition-transform duration-300 scale-75 md:scale-100 group-hover:scale-110">
               {concern.icon && <concern.icon />}
             </div>
             <span className="mb-1 text-xs font-semibold text-gray-800 md:text-sm group-hover:text-green-600 line-clamp-2">{concern.name}</span>
