@@ -110,21 +110,21 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen">
-    <div className="flex flex-col items-center justify-center w-full">
+    <div className="flex flex-col justify-center items-center w-full">
       <Navbar />
       <div className="mt-[100px] w-[95%] max-w-7xl mx-auto p-6 sm:p-8 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#325818] via-[#41691b] to-[#789e1f] animate-gradient-x rounded-t-4xl"></div>
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#ff7b7b] via-[#ff9494] to-[#ffb5b5] animate-gradient-x rounded-t-4xl"></div>
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#325818]/5 via-[#41691b]/5 to-[#789e1f]/5 blur-3xl transform -skew-y-6 scale-150 animate-pulse-slow"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#ff7b7b]/5 via-[#ff9494]/5 to-[#ffb5b5]/5 blur-3xl transform -skew-y-6 scale-150 animate-pulse-slow"></div>
           <div className="relative z-10">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-8 md:h-[55px] sm:mb-10 bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent text-center tracking-tight animate-gradient-x">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-8 md:h-[55px] sm:mb-10 text-[#EF4444] bg-clip-text  text-center tracking-tight animate-gradient-x">
               About Aarogya Diagnostic
             </h1>
             <div className="flex justify-center mb-8">
-              <div className="w-24 h-1 bg-gradient-to-r from-[#325818] via-[#41691b] to-[#789e1f] rounded-full transform transition-all duration-300 hover:scale-x-110"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#ff7b7b] via-[#ff9494] to-[#ffb5b5] rounded-full transform transition-all duration-300 hover:scale-x-110"></div>
             </div>
             <div className="space-y-8 text-gray-700">
-              <p className="text-xl leading-relaxed text-center max-w-3xl mx-auto hover:text-gray-900 transition-colors duration-300 font-light">
+              <p className="mx-auto max-w-3xl text-xl font-light leading-relaxed text-center transition-colors duration-300 hover:text-gray-900">
                 Welcome to Aarogya Diagnostic, your trusted partner in healthcare diagnostics. 
                 We are committed to providing accurate, timely, and comprehensive diagnostic services 
                 to help you make informed decisions about your health.
@@ -132,21 +132,21 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-          <div className="bg-white p-8 rounded-xl">
-            <h2 className="text-3xl font-bold mb-6 text-[#325818] flex items-center">
+          <div className="p-8 bg-white rounded-xl">
+            <h2 className="text-3xl font-bold mb-6 text-[#ff7b7b] flex items-center">
               <span className="mr-3 text-2xl">🎯</span> Our Mission
             </h2>
-            <p className="text-xl leading-relaxed text-gray-700 hover:text-gray-900 transition-colors duration-300">
+            <p className="text-xl leading-relaxed text-gray-700 transition-colors duration-300 hover:text-gray-900">
               To deliver exceptional diagnostic services with precision and care, making quality 
               healthcare accessible to all. We strive to be at the forefront of medical 
               diagnostics through continuous innovation and adherence to international standards.
             </p>
           </div>
-          <div className="bg-white p-8 rounded-xl shadow-sm mt-8">
-            <h2 className="text-3xl font-bold mb-6 text-[#325818] flex items-center">
+          <div className="p-8 mt-8 bg-white rounded-xl shadow-sm">
+            <h2 className="text-3xl font-bold mb-6 text-[#ff7b7b] flex items-center">
               <span className="mr-3 text-2xl">✨</span> Why Choose Us?
             </h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <ul className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <li className="flex items-center space-x-4 p-4 rounded-lg hover:bg-[#325818]/5 transition-all duration-300 group">
                 {WhyChooseUsIcons.equipment}
                 <span>State-of-the-art diagnostic equipment</span>
@@ -173,11 +173,11 @@ const AboutPage = () => {
               </li>
             </ul>
           </div>
-          <div className="bg-white p-8 rounded-xl mt-8">
-            <h2 className="text-3xl font-bold mb-6 text-[#325818] flex items-center">
+          <div className="p-8 mt-8 bg-white rounded-xl">
+            <h2 className="text-3xl font-bold mb-6 text-[#ff7b7b] flex items-center">
               <span className="mr-3 text-2xl">💫</span> Our Values
             </h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               <li className="p-4 rounded-lg bg-gray-50 hover:bg-[#325818]/10 transition-colors duration-300 flex items-center space-x-3">
                 <div className="w-12 h-12 bg-[#325818]/10 rounded-full flex items-center justify-center group-hover:bg-[#325818] transition-all duration-300">
                   {ValuesIcons.accuracy}
@@ -212,70 +212,70 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      <div className="mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-8 text-[#325818] text-center">Our Team</h2>
+      <div className="px-4 mx-auto mt-12 max-w-7xl sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold mb-8 text-[#ff7b7b] text-center">Our Team</h2>
         
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap gap-4 justify-center mb-12">
           <button
             onClick={() => setActiveFilter('all')}
-            className={`px-8 py-3 rounded-full transition-all duration-300 font-medium shadow-sm ${activeFilter === 'all' ? 'bg-[#325818] text-white shadow-[#325818]/20' : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-[#325818]'}`}
+            className={`px-8 py-3 rounded-full transition-all duration-300 font-medium shadow-sm ${activeFilter === 'all' ? 'bg-[#ff7b7b] text-white shadow-[#ff7b7b]/20' : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-[#ff7b7b]'}`}
           >
             All
           </button>
           <button
             onClick={() => setActiveFilter('doctors')}
-            className={`px-8 py-3 rounded-full transition-all duration-300 font-medium shadow-sm ${activeFilter === 'doctors' ? 'bg-[#325818] text-white shadow-[#325818]/20' : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-[#325818]'}`}
+            className={`px-8 py-3 rounded-full transition-all duration-300 font-medium shadow-sm ${activeFilter === 'doctors' ? 'bg-[#ff7b7b] text-white shadow-[#ff7b7b]/20' : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-[#ff7b7b]'}`}
           >
             Doctors
           </button>
           <button
             onClick={() => setActiveFilter('nurses')}
-            className={`px-8 py-3 rounded-full transition-all duration-300 font-medium shadow-sm ${activeFilter === 'nurses' ? 'bg-[#325818] text-white shadow-[#325818]/20' : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-[#325818]'}`}
+            className={`px-8 py-3 rounded-full transition-all duration-300 font-medium shadow-sm ${activeFilter === 'nurses' ? 'bg-[#ff7b7b] text-white shadow-[#ff7b7b]/20' : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-[#ff7b7b]'}`}
           >
             Nurses
           </button>
           <button
             onClick={() => setActiveFilter('management')}
-            className={`px-8 py-3 rounded-full transition-all duration-300 font-medium shadow-sm ${activeFilter === 'management' ? 'bg-[#325818] text-white shadow-[#325818]/20' : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-[#325818]'}`}
+            className={`px-8 py-3 rounded-full transition-all duration-300 font-medium shadow-sm ${activeFilter === 'management' ? 'bg-[#ff7b7b] text-white shadow-[#ff7b7b]/20' : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-[#ff7b7b]'}`}
           >
             Management
           </button>
         </div>
       
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {filteredTeamMembers.map((member) => (
-            <div key={member.id} className="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:bg-opacity-75">
-              <div className="relative h-56 overflow-hidden">
+            <div key={member.id} className="overflow-hidden bg-white rounded-2xl shadow-md transition-all duration-300 group hover:shadow-xl hover:-translate-y-2 hover:bg-opacity-75">
+              <div className="overflow-hidden relative h-56">
                 <Image 
                   src={member.image} 
                   alt={member.name} 
                   width={400}
                   height={300}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t to-transparent opacity-0 transition-opacity duration-300 from-black/60 group-hover:opacity-100"></div>
               </div>
               <div className="p-8">
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex justify-between items-center mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-[#325818] mb-2 group-hover:text-[#41691b] transition-colors duration-300">{member.name}</h3>
-                    <p className="text-sm font-medium text-[#789e1f]">{member.position}</p>
+                    <h3 className="text-2xl font-bold text-[#ff7b7b] mb-2 group-hover:text-[#ff9494] transition-colors duration-300">{member.name}</h3>
+                    <p className="text-sm font-medium text-[#ff7b7b]">{member.position}</p>
                   </div>
-                  <span className="px-4 py-1 rounded-full text-xs font-medium bg-[#325818]/10 text-[#325818] capitalize">{member.role}</span>
+                  <span className="px-4 py-1 rounded-full text-xs font-medium bg-[#ff7b7b]/10 text-[#ff7b7b] capitalize">{member.role}</span>
                 </div>
-                <p className="text-gray-600 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">{member.description}</p>
+                <p className="leading-relaxed text-gray-600 transition-colors duration-300 group-hover:text-gray-900">{member.description}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="mt-12 w-full flex flex-col items-center">
-        <h2 className="text-2xl font-semibold mb-6 text-[#325818]">Our Facilities</h2>
-        <div className="overflow-x-auto pb-6 scrollbar-hide w-full flex justify-center">
-          <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 min-w-max">
+      <div className="flex flex-col items-center mt-12 w-full">
+        <h2 className="text-2xl font-semibold mb-6 text-[#ff7b7b]">Our Facilities</h2>
+        <div className="flex overflow-x-auto justify-center pb-6 w-full scrollbar-hide">
+          <div className="flex flex-col space-y-6 min-w-max md:flex-row md:space-y-0 md:space-x-6">
             <style jsx global>{`
               .scrollbar-hide::-webkit-scrollbar {
                 display: none;
@@ -292,9 +292,9 @@ const AboutPage = () => {
                 alt="Modern Diagnostic Center"
                 width={400}
                 height={500}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 backdrop-blur-sm bg-white/30 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+              <div className="flex absolute inset-0 justify-center items-center opacity-0 backdrop-blur-sm transition-all duration-300 bg-white/30 group-hover:opacity-100">
                 <p className="text-[#325818] text-lg font-semibold bg-white/80 px-6 py-3 rounded-lg shadow-lg">State-of-the-art Facilities</p>
               </div>
             </div>
@@ -304,9 +304,9 @@ const AboutPage = () => {
                 alt="Advanced Laboratory"
                 width={400}
                 height={500}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 backdrop-blur-sm bg-white/30 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+              <div className="flex absolute inset-0 justify-center items-center opacity-0 backdrop-blur-sm transition-all duration-300 bg-white/30 group-hover:opacity-100">
                 <p className="text-[#325818] text-lg font-semibold bg-white/80 px-6 py-3 rounded-lg shadow-lg">Advanced Laboratory</p>
               </div>
             </div>
@@ -316,9 +316,9 @@ const AboutPage = () => {
                 alt="Expert Medical Team"
                 width={400}
                 height={500}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 backdrop-blur-sm bg-white/30 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+              <div className="flex absolute inset-0 justify-center items-center opacity-0 backdrop-blur-sm transition-all duration-300 bg-white/30 group-hover:opacity-100">
                 <p className="text-[#325818] text-lg font-semibold bg-white/80 px-6 py-3 rounded-lg shadow-lg">Expert Medical Team</p>
               </div>
             </div>
