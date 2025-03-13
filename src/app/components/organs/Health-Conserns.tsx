@@ -125,7 +125,7 @@ const HealthConcerns = () => {
   const filteredConcerns = getFilteredAndSortedConcerns();
 
   return (
-    <div className="p-8 mx-auto w-full bg-gradient-to-t from-[#ff7b7b] to-white">
+    <div className="p-8 mx-auto w-full">
       <div className="flex justify-center items-center mb-8 w-full">
         <h2 className="text-2xl md:text-3xl font-bold text-[#ff7b7b] text-center flex items-center gap-2">
           Search by Health Concerns
@@ -174,7 +174,7 @@ const HealthConcerns = () => {
         {filteredConcerns.slice(0, window.innerWidth < 640 ? 4 : undefined).map((concern, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-3 text-center bg-white/80 backdrop-blur-sm rounded-xl border border-[#ff7b7b]/20 shadow-sm transition-all duration-300 cursor-pointer md:p-4 md:rounded-2xl hover:shadow-md group hover:scale-102 hover:bg-[#ff7b7b]/5"
+            className="flex flex-col items-center p-3 text-center bg-white/80 backdrop-blur-sm rounded-xl border border-[#ff7b7b]/20 shadow-sm transition-all duration-300 cursor-pointer md:p-4 md:rounded-2xl hover:shadow-md group hover:scale-102"
           >
             <div className="mb-2 transition-transform duration-300 scale-75 md:scale-100 group-hover:scale-110">
               {concern.icon && <concern.icon />}
