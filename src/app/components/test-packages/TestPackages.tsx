@@ -51,26 +51,26 @@ const testPackages: TestPackage[] = [
 const TestPackages: React.FC = () => {
   return (
     <div className="w-[95%] mx-auto p-6 mb-12">
-      <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent">
+      <h2 className="text-3xl font-bold mb-8 text-center text-[#EF4444]">
         Diagnostic Test Packages
       </h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {testPackages.map((pkg) => (
-          <div key={pkg.id} className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+          <div key={pkg.id} className="overflow-hidden bg-white rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
             {pkg.popularTests && (
-              <div className="bg-orange-500 text-white text-sm px-4 py-1 absolute right-0 top-4 -rotate-45 transform translate-x-4">
+              <div className="absolute right-0 top-4 px-4 py-1 text-sm text-white bg-orange-500 transform -rotate-45 translate-x-4">
                 Popular
               </div>
             )}
             
             <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-2">{pkg.name}</h3>
-              <p className="text-gray-600 mb-4">{pkg.description}</p>
+              <h3 className="mb-2 text-xl font-bold text-gray-800">{pkg.name}</h3>
+              <p className="mb-4 text-gray-600">{pkg.description}</p>
               
               <div className="mb-4">
-                <h4 className="font-semibold text-gray-700 mb-2">Included Tests:</h4>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                <h4 className="mb-2 font-semibold text-gray-700">Included Tests:</h4>
+                <ul className="space-y-1 list-disc list-inside text-gray-600">
                   {pkg.tests.map((test, index) => (
                     <li key={index}>{test}</li>
                   ))}
@@ -78,18 +78,18 @@ const TestPackages: React.FC = () => {
               </div>
               
               <div className="mb-4">
-                <h4 className="font-semibold text-gray-700 mb-2">Preparation Instructions:</h4>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                <h4 className="mb-2 font-semibold text-gray-700">Preparation Instructions:</h4>
+                <ul className="space-y-1 list-disc list-inside text-gray-600">
                   {pkg.preparationInstructions.map((instruction, index) => (
                     <li key={index}>{instruction}</li>
                   ))}
                 </ul>
               </div>
               
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex justify-between items-center mb-4">
                 <div>
                   <span className="text-gray-400 line-through">₹{pkg.price}</span>
-                  <span className="text-2xl font-bold text-gray-800 ml-2">₹{pkg.discountedPrice}</span>
+                  <span className="ml-2 text-2xl font-bold text-gray-800">₹{pkg.discountedPrice}</span>
                 </div>
                 <span className="text-sm text-gray-600">Report in {pkg.reportTime}</span>
               </div>
@@ -97,7 +97,7 @@ const TestPackages: React.FC = () => {
               <button 
                 onClick={() => window.location.href = '/book-test'}
                 type="button"
-                className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors duration-200"
+                className="py-2 w-full text-white bg-green-600 rounded-lg transition-colors duration-200 hover:bg-green-700"
               >
                 Book Now
               </button>

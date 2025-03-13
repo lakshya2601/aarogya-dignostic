@@ -39,7 +39,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center px-4 md:px-10 h-[60px]">
         <MainLogo className="h-8 md:h-10" aria-label="Company logo" />
         <button
-          className="md:hidden text-[#325818] text-2xl z-50"
+          className="md:hidden text-[#ff7b7b] text-2xl z-50"
           onClick={handleMenuClick}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
@@ -52,7 +52,7 @@ const Navbar = () => {
       {/* Main Navbar */}
       <div
         id="mobile-menu"
-        className={`fixed md:relative top-0 right-0 h-full w-[85%] md:w-full md:h-[60px] bg-gradient-to-b from-[#325818] to-[#789e1f] text-white flex flex-col md:flex-row justify-start md:justify-center items-center pt-20 md:pt-0 px-6 md:px-0 md:gap-10 rounded-l-xl md:rounded-xl z-50 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0`}
+        className={`fixed md:relative top-0 right-0 h-full w-[85%] md:w-full md:h-[60px] bg-gradient-to-b from-[#ff7b7b] to-[#ffb5b5] text-white flex flex-col md:flex-row justify-start md:justify-center items-center pt-20 md:pt-0 px-6 md:px-0 md:gap-10 rounded-l-xl md:rounded-xl z-50 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0`}
         role="menu"
         aria-orientation={isOpen ? 'vertical' : 'horizontal'}
       >
@@ -64,7 +64,7 @@ const Navbar = () => {
             className="w-full md:w-auto"
             role="menuitem"
           >
-            <div className="text-lg md:text-base font-bold md:font-medium hover:font-bold cursor-pointer flex items-center gap-2 px-4 py-3 md:py-0 transition-colors duration-200 hover:bg-[white] hover:text-[#325818] md:hover:bg-transparent md:hover:text-white rounded-lg text-white">
+            <div className="text-lg md:text-base font-bold md:font-medium hover:font-bold cursor-pointer flex items-center gap-2 px-4 py-3 md:py-0 transition-colors duration-200 hover:bg-[white] hover:text-[#ff7b7b] md:hover:bg-transparent md:hover:text-white rounded-lg text-white">
               {item.Options}
             </div>
           </Link>

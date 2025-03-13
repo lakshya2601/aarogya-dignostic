@@ -90,7 +90,7 @@ const Testimonials: React.FC = () => {
 
   return (
     <div className="p-6 px-0 mx-auto mb-12 w-full">
-      <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent">
+      <h2 className="mb-8 text-3xl font-bold text-center text-[#EF4444]">
         हमारे रोगियों के अनुभव
       </h2>
       
@@ -99,7 +99,8 @@ const Testimonials: React.FC = () => {
           className="flex gap-6 transition-transform duration-[2000ms] ease-linear"
           style={{
             transform: `translateX(-${position}%)`,
-            width: `${(duplicatedTestimonials.length * 400) + (duplicatedTestimonials.length * 24)}px`
+            width: `${(duplicatedTestimonials.length * 400) + (duplicatedTestimonials.length * 24)}px`,
+           
           }}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
@@ -107,15 +108,15 @@ const Testimonials: React.FC = () => {
         {duplicatedTestimonials.map((testimonial, index) => (
           <div 
             key={`${testimonial.id}-${index}`}
-            className="flex-shrink-0 w-[400px] bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
+            className="flex-shrink-0 w-[400px] bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] hover:bg-pink-50"
           >
             <div className="flex items-center mb-4">
-              <div className="flex justify-center items-center mr-4 w-12 h-12 text-green-600 bg-gradient-to-br from-green-100 to-green-200 rounded-full">
+              <div className="flex justify-center items-center mr-4 w-12 h-12 text-pink-600 bg-gradient-to-br from-pink-100 to-pink-200 rounded-full">
                 <span className="text-lg font-semibold">{testimonial.name.charAt(0)}</span>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-800">{testimonial.name}</h3>
-                <p className="text-sm text-green-600">{testimonial.service}</p>
+                <p className="text-sm text-pink-600">{testimonial.service}</p>
               </div>
             </div>
             

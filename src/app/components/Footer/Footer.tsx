@@ -10,82 +10,82 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-[#1a4011] via-[#325818] to-[#789e1f] text-white py-16 px-6 w-full relative overflow-hidden">
+    <footer className="overflow-hidden relative px-6 py-16 w-full text-gray-800 bg-gradient-to-br from-white via-pink-50 to-pink-100">
       <div className="absolute inset-0 bg-[url('/window.svg')] opacity-5"></div>
       <div className="absolute inset-0 bg-black/5"></div>
       <div className="grid relative grid-cols-1 gap-8 mx-auto max-w-7xl lg:grid-cols-5 lg:gap-12">
         <div className="space-y-6 lg:col-span-2">
-          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-200">Aarogya Diagnostics</h2>
-          <p className="text-sm leading-relaxed text-gray-100">Trusted healthcare diagnostics across multiple locations, delivering excellence in medical testing services.</p>
+          <h2 className="text-3xl font-bold text-[#EF4444]">Aarogya Diagnostics</h2>
+          <p className="text-sm leading-relaxed text-gray-600">Trusted healthcare diagnostics across multiple locations, delivering excellence in medical testing services.</p>
           <div className="pt-2">
-            <p className="text-lg font-semibold text-gray-100">Emergency Helpline:</p>
-            <p className="text-2xl font-bold text-white transition-colors duration-300 hover:text-gray-200">+91 99070 93524</p>
+            <p className="text-lg font-semibold text-gray-700">Emergency Helpline:</p>
+            <p className="text-2xl font-bold text-pink-600 transition-colors duration-300 hover:text-pink-700">+91 99070 93524</p>
           </div>
           <div className="flex pt-4 space-x-5">
-            <Link href="https://facebook.com" target="_blank" className="transition-all duration-300 transform text-white/80 hover:text-white hover:scale-110">
+            <Link href="https://facebook.com" target="_blank" className="text-gray-600 transition-all duration-300 transform hover:text-pink-600 hover:scale-110">
               <i className="text-xl fab fa-facebook-f"></i>
             </Link>
-            <Link href="https://twitter.com" target="_blank" className="transition-all duration-300 transform text-white/80 hover:text-white hover:scale-110">
+            <Link href="https://twitter.com" target="_blank" className="text-gray-600 transition-all duration-300 transform hover:text-pink-600 hover:scale-110">
               <i className="text-xl fab fa-twitter"></i>
             </Link>
-            <Link href="https://instagram.com" target="_blank" className="transition-all duration-300 transform text-white/80 hover:text-white hover:scale-110">
+            <Link href="https://instagram.com" target="_blank" className="text-gray-600 transition-all duration-300 transform hover:text-pink-600 hover:scale-110">
               <i className="text-xl fab fa-instagram"></i>
             </Link>
-            <Link href="https://linkedin.com" target="_blank" className="transition-all duration-300 transform text-white/80 hover:text-white hover:scale-110">
+            <Link href="https://linkedin.com" target="_blank" className="text-gray-600 transition-all duration-300 transform hover:text-pink-600 hover:scale-110">
               <i className="text-xl fab fa-linkedin-in"></i>
             </Link>
           </div>
         </div>
 
         <div className="space-y-4">
-          <h3 className="mb-4 text-xl font-semibold text-white">Quick Links</h3>
+          <h3 className="mb-4 text-xl font-semibold text-gray-800">Quick Links</h3>
           <ul className="space-y-3 text-sm">
             <li>
-              <Link href="/about" className="inline-flex items-center transition-all duration-300 text-white/80 hover:text-white hover:translate-x-1">
-                <span className="mr-2 text-white">→</span> <div className="text-white">About Us</div>
+              <Link href="/about" className="inline-flex items-center text-gray-600 transition-all duration-300 hover:text-pink-600 hover:translate-x-1">
+                <span className="mr-2 text-pink-500">→</span> <div className="text-gray-700">About Us</div>
               </Link>
             </li>
             <li>
-              <Link href="/services" className="inline-flex items-center transition-all duration-300 text-white/80 hover:text-white hover:translate-x-1">
-                <span className="mr-2 text-white">→</span> <div className="text-white">Our Services</div>
+              <Link href="/services" className="inline-flex items-center text-gray-600 transition-all duration-300 hover:text-pink-600 hover:translate-x-1">
+                <span className="mr-2 text-pink-500">→</span> <div className="text-gray-700">Our Services</div>
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="inline-flex items-center transition-all duration-300 text-white/80 hover:text-white hover:translate-x-1">
-                <span className="mr-2 text-white">→</span> <div className="text-white">Contact Us</div>
+              <Link href="/contact" className="inline-flex items-center text-gray-600 transition-all duration-300 hover:text-pink-600 hover:translate-x-1">
+                <span className="mr-2 text-pink-500">→</span> <div className="text-gray-700">Contact Us</div>
               </Link>
             </li>
             <li>
-              <Link href="/careers" className="inline-flex items-center transition-all duration-300 text-white/80 hover:text-white hover:translate-x-1">
-                <span className="mr-2 text-white">→</span> <div className="text-white">Careers</div>
+              <Link href="/careers" className="inline-flex items-center text-gray-600 transition-all duration-300 hover:text-pink-600 hover:translate-x-1">
+                <span className="mr-2 text-pink-500">→</span> <div className="text-gray-700">Careers</div>
               </Link>
             </li>
           </ul>
         </div>
 
         <div className="space-y-4">
-          <h3 className="mb-4 text-xl font-semibold text-white">Policies</h3>
+          <h3 className="mb-4 text-xl font-semibold text-gray-800">Policies</h3>
           <ul className="space-y-3 text-sm">
             <li>
-              <Link href="/terms" className="inline-flex items-center transition-all duration-300 text-white/80 hover:text-white hover:translate-x-1">
-                <span className="mr-2 text-white">→</span> <div className="text-white">Terms & Conditions</div>
+              <Link href="/terms" className="inline-flex items-center text-gray-600 transition-all duration-300 hover:text-pink-600 hover:translate-x-1">
+                <span className="mr-2 text-pink-500">→</span> <div className="text-gray-700">Terms & Conditions</div>
               </Link>
             </li>
             <li>
-              <Link href="/privacy" className="inline-flex items-center transition-all duration-300 text-white/80 hover:text-white hover:translate-x-1">
-                <span className="mr-2 text-white">→</span> <div className="text-white">Privacy Policy</div>
+              <Link href="/privacy" className="inline-flex items-center text-gray-600 transition-all duration-300 hover:text-pink-600 hover:translate-x-1">
+                <span className="mr-2 text-pink-500">→</span> <div className="text-gray-700">Privacy Policy</div>
               </Link>
             </li>
             <li>
-              <Link href="/refund" className="inline-flex items-center transition-all duration-300 text-white/80 hover:text-white hover:translate-x-1">
-                <span className="mr-2 text-white">→</span> <div className="text-white">Refund & Cancellation</div>
+              <Link href="/refund" className="inline-flex items-center text-gray-600 transition-all duration-300 hover:text-pink-600 hover:translate-x-1">
+                <span className="mr-2 text-pink-500">→</span> <div className="text-gray-700">Refund & Cancellation</div>
               </Link>
             </li>
           </ul>
         </div>
 
         <div className="space-y-4">
-          <h3 className="mb-4 text-xl font-semibold text-white">Find Us</h3>
+          <h3 className="mb-4 text-xl font-semibold text-gray-800">Find Us</h3>
           <div 
             onClick={handleMapClick}
             className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer relative h-[200px] group"
@@ -102,15 +102,15 @@ const Footer: React.FC = () => {
               </span>
             </div>
           </div>
-          <address className="text-sm not-italic text-white/80">
+          <address className="text-sm not-italic text-gray-600">
             Dhar, M.P.
           </address>
         </div>
       </div>
       
-      <div className="flex justify-center items-center pt-8 mt-12 text-sm text-center border-t border-white/20 text-white/70">
+      <div className="flex justify-center items-center pt-8 mt-12 text-sm text-center text-gray-600 border-t border-pink-200">
         &copy; {new Date().getFullYear()} &nbsp;
-        <span className="font-extrabold text-white transition-colors duration-300 hover:text-gray-200">
+        <span className="font-extrabold text-pink-600 transition-colors duration-300 hover:text-pink-700">
           Aarogya Diagnostics
         </span>
         &nbsp; All Rights Reserved.

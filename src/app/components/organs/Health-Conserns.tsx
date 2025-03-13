@@ -125,9 +125,9 @@ const HealthConcerns = () => {
   const filteredConcerns = getFilteredAndSortedConcerns();
 
   return (
-    <div className="p-8 mx-auto w-full">
+    <div className="p-8 mx-auto w-full bg-gradient-to-t from-[#ff7b7b] to-white">
       <div className="flex justify-center items-center mb-8 w-full">
-        <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent tracking-tight text-center flex items-center gap-2">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#ff7b7b] text-center flex items-center gap-2">
           Search by Health Concerns
         </h2>
       </div>
@@ -139,7 +139,7 @@ const HealthConcerns = () => {
           placeholder="Search Test"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="px-4 py-3 w-full rounded-xl border-2 border-gray-200 md:px-6 md:py-4 focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="px-4 py-3 w-full rounded-xl border-2 border-[#FF7B7B] md:px-6 md:py-4 focus:outline-none focus:ring-2 focus:ring-[#FF7B7B]"
         />
       </div>
 
@@ -159,7 +159,7 @@ const HealthConcerns = () => {
             key={filter}
             onClick={() => setActiveFilter(filter)}
             className={`px-3 py-1.5 rounded-full text-xs whitespace-nowrap transition-all md:px-4 md:py-2 md:text-sm ${
-              activeFilter === filter ? 'bg-green-100 text-green-600 font-bold' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              activeFilter === filter ? 'bg-[#FF7B7B] text-white font-bold' : 'bg-white/50 text-[#FF7B7B] hover:bg-[#FF7B7B] hover:text-white'
             }`}
           >
             {filter === 'all' ? 'All Tests' : 
@@ -174,16 +174,16 @@ const HealthConcerns = () => {
         {filteredConcerns.slice(0, window.innerWidth < 640 ? 4 : undefined).map((concern, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-3 text-center bg-white rounded-xl border border-gray-100 shadow-sm transition-all duration-300 cursor-pointer md:p-4 md:rounded-2xl hover:shadow-md group hover:scale-102"
+            className="flex flex-col items-center p-3 text-center bg-white/80 backdrop-blur-sm rounded-xl border border-[#ff7b7b]/20 shadow-sm transition-all duration-300 cursor-pointer md:p-4 md:rounded-2xl hover:shadow-md group hover:scale-102 hover:bg-[#ff7b7b]/5"
           >
             <div className="mb-2 transition-transform duration-300 scale-75 md:scale-100 group-hover:scale-110">
               {concern.icon && <concern.icon />}
             </div>
-            <span className="mb-1 text-xs font-semibold text-gray-800 md:text-sm group-hover:text-green-600 line-clamp-2">{concern.name}</span>
+            <span className="mb-1 text-xs font-semibold text-gray-800 md:text-sm group-hover:text-[#ff7b7b] line-clamp-2">{concern.name}</span>
             <p className="text-[10px] md:text-[11px] text-gray-500 mb-2 line-clamp-1">{concern.description}</p>
             <div className="flex flex-col items-center">
               <p className="text-[9px] md:text-[10px] text-gray-400 line-through">MRP: ₹{concern.marketRate}</p>
-              <p className="text-xs font-bold text-green-600 md:text-sm">Arogya: ₹{concern.arogyaRate}</p>
+              <p className="text-xs font-bold text-[#ff7b7b] md:text-sm">Arogya: ₹{concern.arogyaRate}</p>
             </div>
           </div>
         ))}

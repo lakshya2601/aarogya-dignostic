@@ -60,51 +60,33 @@ const doctors = [
 const SpecialistDoctorsCarousel = () => {
   return (
     <div className="w-full px-[60px] p-6">
-      <h2 className="flex justify-center text-3xl font-bold mb-6 bg-gradient-to-l from-[#325818] via-[#41691b] to-[#789e1f] bg-clip-text text-transparent">
-        Consult a Specialist Doctor
+      <h2 className="flex justify-center text-3xl font-bold mb-6 bg-gradient-to-r from-[#ff7b7b] via-[#ff9494] to-[#ffb5b5] bg-clip-text text-transparent">
+        Our Specialist Doctors
       </h2>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {doctors.map((doctor) => (
           <div
             key={doctor.id}
-            className="group bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100"
+            className="group  rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-[#ff7b7b]/20"
           >
-            {/* Doctor Image */}
-            <div className="relative w-full h-48 overflow-hidden">
+            <div className="overflow-hidden relative w-full h-48">
               <Image
                 src={doctor.image}
                 alt={doctor.name}
                 width={400}
                 height={300}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
               />
             </div>
-
-            {/* Doctor Details */}
-            <div className="p-6 bg-gradient-to-r from-[#325818] to-[#789e1f]">
-              <h3 className="text-2xl font-bold text-white mb-2 transition-colors duration-300">
+            <div className="p-6 bg-gradient-to-r from-[#ff7b7b] to-[#ff9494]">
+              <h3 className="mb-2 text-2xl font-bold text-white transition-colors duration-300">
                 {doctor.name}
               </h3>
-              <p className="text-lg text-white/90 font-medium">{doctor.specialty}</p>
-              <button className="mt-4 px-6 py-2 bg-white text-[#325818] rounded-lg font-semibold transition-all duration-300 hover:bg-opacity-90 hover:shadow-md">
-                Book Appointment
-              </button>
+              <p className="text-lg font-medium text-white/90">{doctor.specialty}</p>
             </div>
           </div>
         ))}
       </div>
-
-      {/* Hide Scrollbar */}
-      <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
     </div>
   );
 };

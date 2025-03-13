@@ -57,19 +57,19 @@ const healthPackages = [
 
 const HealthPackages = () => {
   return (
-    <div className="content-wrapper w-full bg-[#F0F8E1] py-12">
-      <div className="w-full px-4 md:px-6 lg:px-9">
+    <div className="content-wrapper w-full bg-[#FFF5F5] py-12">
+      <div className="px-4 w-full md:px-6 lg:px-9">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
+          className="mb-12 text-center"
         >
-          <h2 className="text-4xl font-bold text-[#1F1D42]">
+          <h2 className="text-4xl font-bold text-[#B91C1C]">
             Popular Health Packages
           </h2>
         </motion.div>
 
-        <div className="flex gap-8 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory">
+        <div className="flex overflow-x-auto gap-8 pb-8 scrollbar-hide snap-x snap-mandatory">
           {healthPackages.map((pkg) => (
             <div
               key={pkg.id}
@@ -87,55 +87,55 @@ const HealthPackages = () => {
               </div>
 
               {/* Mobile Static Content */}
-              <div className="md:hidden absolute w-full bottom-0 bg-[#86B971] text-center px-6 py-6">
+              <div className="md:hidden absolute w-full bottom-0 bg-[#f16b6b] text-center px-6 py-6">
                 <div className="relative">
-                  <div className="absolute -top-16 left-0 w-full h-16 bg-[#86B971] rounded-t-md">
-                    <div className="w-full h-full bg-[#86B971] rounded-t-[50%]"></div>
+                  <div className="absolute -top-16 left-0 w-full h-16 bg-[#f16b6b] rounded-t-md">
+                    <div className="w-full h-full bg-[#f16b6b] rounded-t-[50%]"></div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-white">
+                  <h3 className="mb-2 text-xl font-bold text-white">
                     {pkg.title}
                   </h3>
-                  <p className="text-sm text-white/90 mb-2">{pkg.tests}</p>
-                  <p className="text-xs mb-3 text-white/80">{pkg.description}</p>
-                  <div className="flex items-center justify-center gap-3 mb-2">
-                    <span className="line-through text-sm text-white/60">{pkg.oldPrice}</span>
+                  <p className="mb-2 text-sm text-white/90">{pkg.tests}</p>
+                  <p className="mb-3 text-xs text-white/80">{pkg.description}</p>
+                  <div className="flex gap-3 justify-center items-center mb-2">
+                    <span className="text-sm line-through text-white/60">{pkg.oldPrice}</span>
                     <span className="text-lg font-bold text-white">{pkg.newPrice}</span>
                   </div>
-                  <p className="text-sm font-semibold text-[#2d7f0b]">
+                  <p className="text-sm font-semibold text-[#991B1B]">
                     Save {pkg.discount} Today!
                   </p>
                 </div>
               </div>
 
               {/* Desktop Content with Hover - remains the same */}
-              <div className="absolute w-full transition-all duration-700 ease-in-out bottom-0 hidden md:block md:group-hover:translate-y-full md:group-hover:bottom-full bg-[#86B971] text-center px-14 py-12 z-10">
+              <div className="absolute w-full transition-all duration-700 ease-in-out bottom-0 hidden md:block md:group-hover:translate-y-full md:group-hover:bottom-full bg-[#f16b6b] text-center px-14 py-12 z-10">
                 <div className="relative">
                   {/* Curved top edge - remains the same */}
-                  <div className="absolute -top-16 md:-top-20 left-0 w-full h-16 md:h-20 bg-[#86B971] rounded-t-md">
-                    <div className="w-full h-full bg-[#86B971] rounded-t-[50%]"></div>
+                  <div className="absolute -top-16 md:-top-20 left-0 w-full h-16 md:h-20 bg-[#f16b6b] rounded-t-md">
+                    <div className="w-full h-full bg-[#f16b6b] rounded-t-[50%]"></div>
                   </div>
                   
-                  <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4 text-white">
+                  <h3 className="mb-2 text-xl font-bold text-white md:text-2xl md:mb-4">
                     {pkg.title}
                   </h3>
-                  <p className="text-sm text-white/90 mb-2">{pkg.tests}</p>
-                  <div className="flex items-center justify-center gap-3">
-                    <span className="line-through text-sm text-white/60">{pkg.oldPrice}</span>
+                  <p className="mb-2 text-sm text-white/90">{pkg.tests}</p>
+                  <div className="flex gap-3 justify-center items-center">
+                    <span className="text-sm line-through text-white/60">{pkg.oldPrice}</span>
                     <span className="text-lg font-bold text-white">{pkg.newPrice}</span>
                   </div>
                 </div>
               </div>
 
               {/* Extra Content (Shows on Hover - Hidden on Mobile) */}
-              <div className="absolute bottom-0 w-full h-1/2 bg-[#86B971] hidden md:flex items-center justify-center flex-col p-6 text-[#dee8c2] transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 z-0">
-                <p className="text-sm text-white/80 mb-4">{pkg.description}</p>
+              <div className="absolute bottom-0 w-full h-1/2 bg-[#f16b6b] hidden md:flex items-center justify-center flex-col p-6 text-[#FFF1F1] transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 z-0">
+                <p className="mb-4 text-sm text-white/80">{pkg.description}</p>
                 <h4 className="text-xl text-center">
-                  Save <span className="text-[#2d7f0b]">{pkg.discount}</span> Today!
+                  Save <span className="text-[#ffffff] font-extrabold">{pkg.discount}</span> Today!
                 </h4>
               </div>
 
               {/* Discount Badge - remains the same */}
-              <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              <div className="absolute top-4 right-4 bg-[#EF4444] text-white px-3 py-1 rounded-full text-sm font-semibold">
                 {pkg.discount}
               </div>
             </div>
