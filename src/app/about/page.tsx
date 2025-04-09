@@ -8,36 +8,61 @@ import SideButton from '../components/SideButtons/side-button';
 const teamMembers = [
   {
     id: 1,
-    name: "Dr. Sarah Johnson",
+    name: "Dr. Pankaj Gupta",
     role: "doctors",
-    position: "Chief Medical Officer",
+    position: "Chief Medical Officer (MBBS, MD, Pathologist)",
     image: "/doctor-image.jpg",
-    description: "Specializes in diagnostic medicine with over 15 years of experience."
+    description: "Specializes in diagnostic medicine with over 10 years of experience."
   },
   {
     id: 2,
-    name: "Dr. Michael Chen",
-    role: "doctors",
-    position: "Senior Pathologist",
-    image: "/doctor-image.jpg",
-    description: "Expert in laboratory medicine and molecular diagnostics."
+    name: "Mr. Pritam Verma",
+    role: "management",
+    position: "Lab Technician (DMLT & BSc)",
+    image: "/Xnip2025-04-09_16-57-19.jpg",
+    description: "Expert in diagnostic equipment and instrumentation."
+
   },
   {
     id: 3,
-    name: "Emma Thompson",
-    role: "nurses",
-    position: "Head Nurse",
-    image: "/doctor-image.jpg",
-    description: "Leads the nursing team with dedication and compassion."
+    name: "Mr. Lokesh Mandloi",
+    role: "management",
+    position: "Lab Technician (DMLT & BSc)",
+    image: "/Xnip2025-04-09_16-55-35.jpg",
+     description: "Expert in laboratory machines and diagnostics."
   },
   {
     id: 4,
-    name: "James Wilson",
+    name: "Mrs. Vinita Tiwari",
     role: "management",
-    position: "Operations Director",
+    position: "Lab Technician (CMLT)",
     image: "/doctor-image.jpg",
     description: "Ensures smooth functioning of all diagnostic services."
-  }
+  },
+  {
+    id: 5,
+    name: "Miss. Mamta Meda",
+    role: "nurses",
+    position: "Receptionist & Sample Collection",
+    image: "/doctor-image.jpg",
+    description: "Responsible for patient care and sample collection."
+  },
+  {
+    id: 6,
+    name: "Mr. Ganesh Nargesh",
+    role: "nurses",
+    position: "Lab assistant & Sample Collection",
+    image: "/doctor-image.jpg",
+    description: "Home visits, sample collection, and patient care."
+  },
+  {
+    id: 7,
+    name: "Miss. Mamta Chouhan",
+    role: "nurses",
+    position: "Receptionist & Sample Collection",
+    image: "/doctor-image.jpg",
+    description: "Responsible for patient care and sample collection."
+  },
 ];
 
 const WhyChooseUsIcons = {
@@ -149,7 +174,7 @@ const AboutPage = () => {
             <ul className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <li className="flex items-center space-x-4 p-4 rounded-lg hover:bg-[#325818]/5 transition-all duration-300 group">
                 {WhyChooseUsIcons.equipment}
-                <span>State-of-the-art diagnostic equipment</span>
+                <span>State of the art diagnostic equipment</span>
               </li>
               <li className="flex items-center space-x-4 p-4 rounded-lg hover:bg-[#325818]/5 transition-all duration-300 group">
                 {WhyChooseUsIcons.professionals}
@@ -244,10 +269,10 @@ const AboutPage = () => {
         </div>
       
         {/* Team Grid */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
           {filteredTeamMembers.map((member) => (
             <div key={member.id} className="overflow-hidden bg-white rounded-2xl shadow-md transition-all duration-300 group hover:shadow-xl hover:-translate-y-2 hover:bg-opacity-75">
-              <div className="overflow-hidden relative h-56">
+              <div className="overflow-hidden relative h-72">
                 <Image 
                   src={member.image} 
                   alt={member.name} 
@@ -288,19 +313,19 @@ const AboutPage = () => {
             `}</style>
             <div className="relative overflow-hidden rounded-lg group cursor-pointer w-[300px] sm:w-[350px] md:w-[400px] h-[400px] sm:h-[450px] md:h-[500px]">
               <Image
-                src="/photo-1552072804-3ba9555a8a74.jpg"
+                src="/home-sample-collection.png"
                 alt="Modern Diagnostic Center"
                 width={400}
                 height={500}
                 className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
               />
               <div className="flex absolute inset-0 justify-center items-center opacity-0 backdrop-blur-sm transition-all duration-300 bg-white/30 group-hover:opacity-100">
-                <p className="text-[#325818] text-lg font-semibold bg-white/80 px-6 py-3 rounded-lg shadow-lg">State-of-the-art Facilities</p>
+                <p className="text-[#325818] text-lg font-semibold bg-white/80 px-6 py-3 rounded-lg shadow-lg">Home sample Collection</p>
               </div>
             </div>
             <div className="relative overflow-hidden rounded-lg group cursor-pointer w-[300px] sm:w-[350px] md:w-[400px] h-[400px] sm:h-[450px] md:h-[500px]">
               <Image
-                src="/photo-1617633784388-f1818619287b.jpg"
+                src="/Xnip2025-04-09_17-12-51.jpg"
                 alt="Advanced Laboratory"
                 width={400}
                 height={500}

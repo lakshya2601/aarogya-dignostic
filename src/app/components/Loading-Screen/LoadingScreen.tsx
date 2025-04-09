@@ -6,7 +6,7 @@ const LoadingScreen: React.FC = () => {
     <div className="flex flex-col justify-center items-center p-4 min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 sm:p-6">
       <div className="mx-auto space-y-8 w-full max-w-4xl text-center sm:space-y-12">
         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#EF4444] transition-all duration-300 hover:scale-105 cursor-default select-none h-[80px]">
-          Aarogya Diagnostic
+          Aarogya Diagnostic Center
         </h1>
         <div className="relative mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md">
           <div className="absolute inset-0 bg-gradient-to-r from-green-100 to-green-200 rounded-full opacity-70 blur-xl animate-pulse loading-pulse"></div>

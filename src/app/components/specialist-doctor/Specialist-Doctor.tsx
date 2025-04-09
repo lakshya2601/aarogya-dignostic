@@ -3,58 +3,71 @@ import Image from 'next/image';
 const doctors = [
   {
     id: 1,
-    name: "Dr. John Doe",
-    specialty: "Cardiologist",
-    image: "/doctor-image.jpg",
+    name: "Dr. Dinesh Chouksey",
+    specialty: "Consultant, Neurology",
+    expertise: "Stroke, Epilepsy, Parkinson's Disease & Movement Disorders, Headache, Migraine, Dementia, Alzheimer's disease Multiple Sclerosis, Myasthenia Gravis, Neuropathy, Myopathy, Vertigo, Syncope with Autonomic Dysfunction",
+    qualifications: "MD (Medicine), DM (Neurology)",
+    department: "Neurosciences",
+    experience: "18 Years",
+    gender: "Male",
+    languages: ["English", "Hindi"],
+    image: "/dr-dinesh-chouksey.webp",
   },
   {
     id: 2,
-    name: "Dr. Jane Smith",
-    specialty: "Dermatologist",
-    image: "/doctor-image.jpg",
+    name: "Dr. Govind Gourh",
+    specialty: "Consultant, ENT, Head & Neck Surgeon",
+    qualifications: "MS (ENT), DNB (ENT)",
+    department: "ENT",
+    experience: "9 Years",
+    gender: "Male",
+    languages: ["English", "Hindi"],
+    image: "/dr-govind.webp",
   },
   {
     id: 3,
-    name: "Dr. Alex Johnson",
-    specialty: "Neurologist",
-    image: "/doctor-image.jpg",
+    name: "Dr. Sunita Chouhan",
+    specialty: "Consultant, Obstetrics & Gynaecology",
+    qualifications: "MS, F. MAS, FICOG",
+    department: "Mother & Child, Gynaecology & Obstetrics",
+    experience: "22 Years",
+    gender: "Female",
+    languages: ["English", "Hindi"],
+    image: "/dr-sunita-chouhan.webp"
   },
   {
     id: 4,
-    name: "Dr. Sarah Wilson",
-    specialty: "Pediatrician",
-    image: "/doctor-image.jpg",
+    name: "Dr. Sandeep Choudhary",
+    specialty: "Ayurveda & Anorectal",
+    qualifications: "BAMS, BAMS (Ayurveda)",
+    department: "Anorectal (Piles, Fissure, Fistula)",
+    experience: "5 Years",
+    gender: "Male",
+    languages: ["English", "Hindi"],
+    image: "/dr-sunita-chouhan.webp"
   },
   {
     id: 5,
-    name: "Dr. Michael Chen",
-    specialty: "Orthopedic Surgeon",
-    image: "/doctor-image.jpg",
+    name: "Dr. Khushbu Dixit",
+    specialty: "General Physician",
+    qualifications: "BHMS, CGO, CSD",
+    department: "Obstetrics & Gynecology, Skin dicease",
+    experience: "5 Years",
+    gender: "Female",
+    languages: ["English", "Hindi"],
+    image: "/dr-sunita-chouhan.webp"
   },
   {
     id: 6,
-    name: "Dr. Emily Brown",
-    specialty: "Psychiatrist",
-    image: "/doctor-image.jpg",
+    name: "Dr. Priyanka Verma",
+    specialty: "General Physician",
+    qualifications: "BHMS",
+    department: "Gynecology & Arthritis",
+    experience: "5 Years",
+    gender: "Female",
+    languages: ["English", "Hindi"],
+    image: "/dr-sunita-chouhan.webp"
   },
-  {
-    id: 7,
-    name: "Dr. Robert Taylor",
-    specialty: "Ophthalmologist",
-    image: "/doctor-image.jpg",
-  },
-  {
-    id: 8,
-    name: "Dr. Lisa Anderson",
-    specialty: "Endocrinologist",
-    image: "/doctor-image.jpg",
-  },
-  {
-    id: 9,
-    name: "Dr. David Miller",
-    specialty: "Pulmonologist",
-    image: "/doctor-image.jpg",
-  }
 ];
 
 const SpecialistDoctorsCarousel = () => {
@@ -67,22 +80,57 @@ const SpecialistDoctorsCarousel = () => {
         {doctors.map((doctor) => (
           <div
             key={doctor.id}
-            className="group  rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-[#ff7b7b]/20"
+            className="overflow-hidden bg-white rounded-xl shadow-lg transition-all duration-300 group hover:shadow-xl hover:-translate-y-1"
           >
-            <div className="overflow-hidden relative w-full h-48">
+            <div className="overflow-hidden relative w-full h-[450px]">
               <Image
                 src={doctor.image}
                 alt={doctor.name}
                 width={400}
-                height={300}
+                height={400}
                 className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
               />
             </div>
-            <div className="p-6 bg-gradient-to-r from-[#ff7b7b] to-[#ff9494]">
-              <h3 className="mb-2 text-2xl font-bold text-white transition-colors duration-300">
+            <div className="p-6">
+            <button className="px-4 py-2 w-full font-extrabold text-white bg-red-500 rounded-md transition-colors duration-300 hover:text-red-500 hover:bg-white">
                 {doctor.name}
-              </h3>
-              <p className="text-lg font-medium text-white/90">{doctor.specialty}</p>
+              </button>
+              <p className="mt-3 mb-3 text-lg font-medium text-gray-600">{doctor.specialty}</p>
+              
+              {/* Star Rating */}
+              <div className="flex items-center mb-4">
+                {[...Array(5)].map((_, index) => (
+                  <svg
+                    key={index}
+                    className="w-5 h-5 text-yellow-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+
+              <div className="mb-6 space-y-2">
+                {doctor.qualifications && (
+                  <p className="text-sm text-gray-600">{doctor.qualifications}</p>
+                )}
+                {doctor.department && (
+                  <p className="text-sm text-gray-600">Department: {doctor.department}</p>
+                )}
+                {doctor.experience && (
+                  <p className="text-sm text-gray-600">Experience: {doctor.experience}</p>
+                )}
+                {doctor.expertise && (
+                  <p className="text-sm text-gray-600 line-clamp-2">Expertise: {doctor.expertise}</p>
+                )}
+                {doctor.languages && (
+                  <p className="text-sm text-gray-600">Languages: {doctor.languages.join(", ")}</p>
+                )}
+              </div>
+
+             
+             
             </div>
           </div>
         ))}
