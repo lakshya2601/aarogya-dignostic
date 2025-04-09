@@ -32,15 +32,23 @@ const Contact = () => {
               <div className="space-y-6">
                 <p className="flex items-start group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
                   <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📍</span>
-                  <span className="text-gray-600 transition-colors duration-300 group-hover:text-gray-900">No. 7, Industrial Estate, Opp. to World Trade Center,Perungudi, Chennai - 600 096, Tamil Nadu, India</span>
+                  <span className="text-gray-600 transition-colors duration-300 group-hover:text-gray-900">Behind Patidar Hospital, Basement of Krishna Hospital, Dhar (M.P.)</span>
                 </p>
                 <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
                   <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📞</span>
-                  <a href="tel:+919700369700" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">+91 9700369700</a>
+                  <a href="tel:+919700369700" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">+91 9589242406</a>
+                </p>
+                <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
+                  <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📞</span>
+                  <a href="tel:+919700369700" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">+91 9907093524</a>
+                </p>
+                <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
+                  <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">☎</span>
+                  <a href="tel:+919700369700" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">07292- 233524</a>
                 </p>
                 <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
                   <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">✉️</span>
-                  <a href="mailto:info@neubergdiagnostics.com" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">info@neubergdiagnostics.com</a>
+                  <a href="mailto:info@neubergdiagnostics.com" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">arogyadhar@gmail.com</a>
                 </p>
               </div>
             </div>

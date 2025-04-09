@@ -5,53 +5,53 @@ import Image from 'next/image';
 const healthPackages = [
   {
     id: 1,
-    title: "Energy Package",
-    tests: "Includes 16 Tests",
-    description: "Liver Function Test, 25 OH Cholecalciferol (D2+D3), Vitamin B - 12 Level, Fasting Insulin & Glucose",
-    oldPrice: "Rs. 4360",
-    newPrice: "Rs. 1500",
-    discount: "66% off",
-    image: "/photo-1617633784388-f1818619287b.jpg"  // Add image for energy package
+    title: "Basic Health Package",
+    tests: "Total Tests: 42",
+    description: "CBC, FBS, Creatinine, Urea, Cholesterol, SGPT, Calcium, Sodium, Potassium, Chloride, Urine",
+    oldPrice: "Rs. 1500",
+    newPrice: "Rs. 700",
+    discount: "53% off",
+    image: "/basic-health.jpg"
   },
   {
     id: 2,
-    title: "Gym Package - TN",
-    tests: "Includes 52 Tests",
-    description: "Glyco Hemoglobin (HbA1c), Liver Function Test, TSH, Lipid Profile, Urea, Creatinine, Uric Acid, 25...",
-    oldPrice: "Rs. 7815",
-    newPrice: "Rs. 2899",
-    discount: "63% off",
-    image: "/images/gym-package.jpg"  // Add image for gym package
+    title: "Regular Health Package",
+    tests: "Total Tests: 47",
+    description: "CBC, FBS, PPBS, Creatinine, Urea, Uric Acid, Calcium, Sodium, Potassium, Chloride, Cholesterol, SGPT, SGOT, Thyroid Profile, Urine",
+    oldPrice: "Rs. 2500",
+    newPrice: "Rs. 1000",
+    discount: "60% off",
+    image: "/regular-health.jpg"
   },
   {
     id: 3,
-    title: "Men's Health Check-Basic",
-    tests: "Includes 50 Tests",
-    description: "Glycon Hemoglobin (HbA1c), Liver Function Test, TSH, Lipid Profile, Urea, Creatinine, Uric Acid, 25...",
-    oldPrice: "Rs. 5775",
-    newPrice: "Rs. 1999",
-    discount: "65% off",
-    image: "/images/mens-health.jpg"  // Add image for men's health
+    title: "Complete Health Package",
+    tests: "Total Tests: 66",
+    description: "CBC, FBS, PPBS, HBA1C, Uric Acid, Calcium, Lipid Profile, Renal Profile, Liver Profile, Thyroid Profile, Urine",
+    oldPrice: "Rs. 3500",
+    newPrice: "Rs. 1500",
+    discount: "57% off",
+    image: "/complete-health.jpg"
   },
   {
     id: 4,
-    title: "Full Body Checkup",
-    tests: "Includes 60 Tests",
-    description: "Liver Function Test, Kidney Profile, Lipid Profile, Thyroid Panel, Complete Blood Count, Diabetes Test...",
-    oldPrice: "Rs. 6499",
-    newPrice: "Rs. 2499",
-    discount: "62% off",
-    image: "/images/full-body.jpg"  // Add image for full body checkup
+    title: "Full Body Health Package",
+    tests: "Total Tests: 68",
+    description: "CBC, FBS, PPBS, HBA1C, Uric Acid, Calcium, Vitamin B, Lipid Profile, Renal Profile, Liver Profile, Thyroid Profile, Urine, ECG",
+    oldPrice: "Rs. 4500",
+    newPrice: "Rs. 2000",
+    discount: "56% off",
+    image: "/full-body-health.jpg"
   },
   {
     id: 5,
-    title: "Heart Health Package",
-    tests: "Includes 45 Tests",
-    description: "Cardiac Risk Markers, Lipid Profile, ECG, Blood Pressure, Complete Blood Count, Diabetes Test...",
-    oldPrice: "Rs. 5999",
-    newPrice: "Rs. 2299",
-    discount: "61% off",
-    image: "/images/heart-health.jpg"  // Add image for heart health
+    title: "Anemia Package",
+    tests: "Total Tests: 24",
+    description: "Iron Level, Iron TIBC, Ferritin, Transferrin Saturation, CBC, Vitamin B12, Vitamin D, Folic Acid, Thyroid, Sickling Test",
+    oldPrice: "Rs. 8500",
+    newPrice: "Rs. 3500",
+    discount: "59% off",
+    image: "/anemia-package.jpg"
   }
 ];
 
