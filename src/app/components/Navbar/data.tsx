@@ -23,9 +23,9 @@ export const navbar: NavItem[] = [
     Options: "Contact Us",
     route: "/contact",
   },
-  {
-    Options: "Book Test",
-    route: "/book-test",
-  },
+  // {
+  //   Options: "Book Test",
+  //   route: "/book-test",
+  // },
   
 ];
