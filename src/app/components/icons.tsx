@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export const MainLogo = ({ className }: { className?: string }) => (
   <Image
-    src="/Xnip2025-04-09_18-15-19 (1).svg"
+    src="/4fb30281-8fe9-41da-948c-33c178e86c48.svg"
     alt="Aarogya Diagnostic Logo"
     className={className}
-    width="200"
-    height="180"
+    width={200}
+    height={680}
     priority
   />
 )

@@ -11,7 +11,7 @@ const healthPackages = [
     oldPrice: "Rs. 1500",
     newPrice: "Rs. 700",
     discount: "53% off",
-    image: "/basic-health.jpg"
+    image: "/ChatGPT Image Apr 10, 2025, 03_29_40 PM.png"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const healthPackages = [
     oldPrice: "Rs. 2500",
     newPrice: "Rs. 1000",
     discount: "60% off",
-    image: "/regular-health.jpg"
+    image: "/ChatGPT Image Apr 10, 2025, 03_37_59 PM.png"
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const healthPackages = [
     oldPrice: "Rs. 3500",
     newPrice: "Rs. 1500",
     discount: "57% off",
-    image: "/complete-health.jpg"
+    image: "/ChatGPT Image Apr 10, 2025, 03_42_45 PM.png"
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const healthPackages = [
     oldPrice: "Rs. 4500",
     newPrice: "Rs. 2000",
     discount: "56% off",
-    image: "/full-body-health.jpg"
+    image: "/ChatGPT Image Apr 10, 2025, 03_45_14 PM.png"
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const healthPackages = [
     oldPrice: "Rs. 8500",
     newPrice: "Rs. 3500",
     discount: "59% off",
-    image: "/anemia-package.jpg"
+    image: "/ChatGPT Image Apr 10, 2025, 03_48_28 PM.png"
   }
 ];
 
@@ -77,13 +77,14 @@ const HealthPackages = () => {
             >
               {/* Background Image */}
               <div className="absolute inset-0 md:transition-transform md:duration-700 md:ease-in-out md:group-hover:scale-100 md:scale-110">
-                <Image
-                  src={pkg.image}
-                  alt={pkg.title}
-                  fill
-                  className="object-cover"
-                  priority
-                />
+              <Image
+  src={pkg.image}
+  alt={pkg.title}
+  fill
+  className="object-contain object-top bg-white" // or use bg-[#FFF5F5] to match the card background
+  priority
+/>
+
               </div>
 
               {/* Mobile Static Content */}

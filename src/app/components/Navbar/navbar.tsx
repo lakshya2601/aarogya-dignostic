@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-[95%] mt-[30px] relative" role="navigation" aria-label="Main navigation">
+    <nav className="w-[95%] mt-[10px] relative" role="navigation" aria-label="Main navigation">
       {/* Backdrop Overlay */}
       <div 
         className={`fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 md:hidden ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
@@ -36,8 +36,8 @@ const Navbar = () => {
       />
       
       {/* Top Navbar */}
-      <div className="flex justify-between items-center px-4 md:px-10 h-[60px]">
-        <MainLogo className="h-8 md:h-10" aria-label="Company logo" />
+      <div className="flex justify-between items-center px-2 h-full md:px-3">
+        <MainLogo className="h-[40px] w-[60px] md:h-[80px] md:w-[180px] -rotate-2 md:mb-2" aria-label="Company logo" />
         <button
           className="md:hidden text-[#ff7b7b] text-2xl z-50"
           onClick={handleMenuClick}
