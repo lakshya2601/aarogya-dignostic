@@ -36,7 +36,7 @@ const teamMembers = [
     name: "Mrs. Vinita Tiwari",
     role: "management",
     position: "Lab Technician (CMLT)",
-    image: "/doctor-image.jpg",
+    image: "/vinita-tiwari.jpeg",
     description: "Ensures smooth functioning of all diagnostic services."
   },
   {
@@ -44,7 +44,7 @@ const teamMembers = [
     name: "Miss. Mamta Meda",
     role: "nurses",
     position: "Receptionist & Sample Collection",
-    image: "/doctor-image.jpg",
+    image: "/mamta-medha.jpeg",
     description: "Responsible for patient care and sample collection."
   },
   {
@@ -52,7 +52,7 @@ const teamMembers = [
     name: "Mr. Ganesh Nargesh",
     role: "nurses",
     position: "Lab assistant & Sample Collection",
-    image: "/doctor-image.jpg",
+    image: "/ganesh-nargesh.jpeg",
     description: "Home visits, sample collection, and patient care."
   },
   {
@@ -60,7 +60,7 @@ const teamMembers = [
     name: "Miss. Mamta Chouhan",
     role: "nurses",
     position: "Receptionist & Sample Collection",
-    image: "/doctor-image.jpg",
+    image: "/mamta-chouhan.jpeg",
     description: "Responsible for patient care and sample collection."
   },
 ];

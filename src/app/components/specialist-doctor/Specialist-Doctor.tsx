@@ -44,19 +44,19 @@ const doctors = [
     experience: "5 Years",
     gender: "Male",
     languages: ["English", "Hindi"],
-    image: "/dr-sunita-chouhan.webp"
+    image: "/WhatsApp Image 2025-04-11 at 19.22.19.jpeg"
   },
-  {
-    id: 5,
-    name: "Dr. Khushbu Dixit",
-    specialty: "General Physician",
-    qualifications: "BHMS, CGO, CSD",
-    department: "Obstetrics & Gynecology, Skin dicease",
-    experience: "5 Years",
-    gender: "Female",
-    languages: ["English", "Hindi"],
-    image: "/dr-sunita-chouhan.webp"
-  },
+  // {
+  //   id: 5,
+  //   name: "Dr. Khushbu Dixit",
+  //   specialty: "General Physician",
+  //   qualifications: "BHMS, CGO, CSD",
+  //   department: "Obstetrics & Gynecology, Skin dicease",
+  //   experience: "5 Years",
+  //   gender: "Female",
+  //   languages: ["English", "Hindi"],
+  //   image: "/dr-sunita-chouhan.webp"
+  // },
   {
     id: 6,
     name: "Dr. Priyanka Verma",
@@ -66,7 +66,7 @@ const doctors = [
     experience: "5 Years",
     gender: "Female",
     languages: ["English", "Hindi"],
-    image: "/dr-sunita-chouhan.webp"
+    image: "/priyanka-verma.jpeg"
   },
 ];
 

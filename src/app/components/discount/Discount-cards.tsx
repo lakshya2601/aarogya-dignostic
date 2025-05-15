@@ -11,7 +11,7 @@ const healthPackages = [
     oldPrice: "Rs. 1500",
     newPrice: "Rs. 700",
     discount: "53% off",
-    image: "/ChatGPT Image Apr 10, 2025, 03_29_40 PM.png"
+    image: "/ChatGPT Image Apr 11, 2025, 01_43_22 PM.png"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const healthPackages = [
     oldPrice: "Rs. 2500",
     newPrice: "Rs. 1000",
     discount: "60% off",
-    image: "/ChatGPT Image Apr 10, 2025, 03_37_59 PM.png"
+    image: "/ChatGPT Image Apr 11, 2025, 01_43_27 PM.png"
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const healthPackages = [
     oldPrice: "Rs. 3500",
     newPrice: "Rs. 1500",
     discount: "57% off",
-    image: "/ChatGPT Image Apr 10, 2025, 03_42_45 PM.png"
+    image: "/ChatGPT Image Apr 11, 2025, 01_47_40 PM.png"
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const healthPackages = [
     oldPrice: "Rs. 4500",
     newPrice: "Rs. 2000",
     discount: "56% off",
-    image: "/ChatGPT Image Apr 10, 2025, 03_45_14 PM.png"
+    image: "/ChatGPT Image Apr 11, 2025, 01_43_37 PM.png"
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const healthPackages = [
     oldPrice: "Rs. 8500",
     newPrice: "Rs. 3500",
     discount: "59% off",
-    image: "/ChatGPT Image Apr 10, 2025, 03_48_28 PM.png"
+    image: "/ChatGPT Image Apr 11, 2025, 01_43_41 PM.png"
   }
 ];
 
