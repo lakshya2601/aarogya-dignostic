@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Footer: React.FC = () => {
-  const defaultLocation = "22.596158, 75.304490"; // Dhar, M.P. coordinates
+  const defaultLocation = "22.59615946586736, 75.3044999433552"; // Dhar, M.P. coordinates
 
   const handleMapClick = () => {
     window.open(`https://www.google.com/maps?q=${defaultLocation}`, '_blank');

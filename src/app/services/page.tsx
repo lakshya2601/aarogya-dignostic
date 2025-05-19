@@ -154,10 +154,10 @@ const ServicesPage = () => {
           </h2>
           
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <NetworkCard number="50+" text="Clinical Laboratories" />
-            <NetworkCard number="200+" text="Collection Centers" />
+            <NetworkCard number="4+" text="Clinical Laboratories" />
+            <NetworkCard number="6+" text="Collection Centers" />
             <NetworkCard number="1M+" text="Patients Served" />
-            <NetworkCard number="10+" text="Years of Excellence" />
+            <NetworkCard number="7+" text="Years of Excellence" />
           </div>
         </div>
       </div>

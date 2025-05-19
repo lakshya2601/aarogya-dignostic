@@ -30,33 +30,74 @@ const Contact = () => {
             <div className="p-8 mb-8 bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md">
               <h3 className="text-2xl font-semibold mb-6 text-gray-800 relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-16 before:h-1 before:bg-gradient-to-r before:from-[#ff7b7b] before:to-[#ffb5b5] pb-4">Corporate Office</h3>
               <div className="space-y-6">
-                <p className="flex items-start group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
-                  <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📍</span>
-                  <span className="text-gray-600 transition-colors duration-300 group-hover:text-gray-900">Behind Patidar Hospital, Basement of Krishna Hospital, Dhar (M.P.)</span>
-                </p>
-                <p className="flex items-start group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
-                  <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📍</span>
-                  <span className="text-gray-600 transition-colors duration-300 group-hover:text-gray-900">18, Sajan Road, Near H.S. School, Jhabua (M.P.)</span>
-                </p>
-                <p className="flex items-start group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
-                  <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📍</span>
-                  <span className="text-gray-600 transition-colors duration-300 group-hover:text-gray-900">Rajendra Colony, near Nakoda Parshwanath Temple, Rajgarh (M.P.)</span>
-                </p>
-                <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
-                  <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📞</span>
-                  <a href="tel:+919700369700" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">+91 9589242406</a>
-                </p>
-                <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
-                  <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📞</span>
-                  <a href="tel:+919700369700" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">+91 9907093524</a>
-                </p>
-                <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
-                  <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">☎</span>
-                  <a href="tel:+919700369700" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">07292- 233524</a>
-                </p>
+                {/* Dhar Office */}
+                <div className="mb-8">
+                  <p className="flex items-start group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
+                    <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📍</span>
+                    <span className="text-gray-600 transition-colors duration-300 group-hover:text-gray-900">Behind Patidar Hospital, Basement of Krishna Hospital, Dhar (M.P.)</span>
+                  </p>
+                  <div className="mt-2 ml-8">
+                    <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
+                      <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📞</span>
+                      <a href="tel:+919589242406" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">+91 9589242406</a>
+                    </p>
+                    <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
+                      <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📞</span>
+                      <a href="tel:+919907093524" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">+91 9907093524</a>
+                    </p>
+                    <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
+                      <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">☎</span>
+                      <a href="tel:07292233524" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">07292-233524</a>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Jhabua Office */}
+                <div className="mb-8">
+                  <p className="flex items-start group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
+                    <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📍</span>
+                    <span className="text-gray-600 transition-colors duration-300 group-hover:text-gray-900">18, Sajan Road, Near H.S. School, Jhabua (M.P.)</span>
+                  </p>
+                  <div className="mt-2 ml-8">
+                    <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
+                      <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📞</span>
+                      <a href="tel:+919993873524" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">+91 9993873524</a>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Rajgarh Office */}
+                <div className="mb-8">
+                  <p className="flex items-start group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
+                    <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📍</span>
+                    <span className="text-gray-600 transition-colors duration-300 group-hover:text-gray-900">Rajendra Colony, near Nakoda Parshwanath Temple, Rajgarh (M.P.)</span>
+                  </p>
+                  <div className="mt-2 ml-8">
+                    <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
+                      <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📞</span>
+                      <a href="tel:+918871773524" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">+91 8871773524</a>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Dhamnod Office */}
+                <div className="mb-8">
+                  <p className="flex items-start group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
+                    <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📍</span>
+                    <span className="text-gray-600 transition-colors duration-300 group-hover:text-gray-900">Gokul Mathura Complex, Old bus stand, Dhamnod (M.P.)</span>
+                  </p>
+                  <div className="mt-2 ml-8">
+                    <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
+                      <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">📞</span>
+                      <a href="tel:+91826939524" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">+91 826939524</a>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Email Contact */}
                 <p className="flex items-center group hover:text-[#ff7b7b] transition-all duration-300 transform hover:translate-x-2">
                   <span className="mr-3 text-xl group-hover:scale-125 transition-transform duration-300 text-[#ff7b7b]">✉️</span>
-                  <a href="mailto:info@neubergdiagnostics.com" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">arogyadhar@gmail.com</a>
+                  <a href="mailto:arogyadhar@gmail.com" className="text-[#ff7b7b] hover:text-[#ffb5b5] transition-colors duration-300 font-medium">arogyadhar@gmail.com</a>
                 </p>
               </div>
             </div>
