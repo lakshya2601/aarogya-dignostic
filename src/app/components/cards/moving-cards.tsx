@@ -27,7 +27,7 @@ const ImageCarousel: React.FC = () => {
             className="relative w-full h-[300px] sm:h-[400px] md:h-[550px] flex items-center justify-center group"
           >
             <Image
-              src="/WhatsApp Image 2025-03-01 at 12.38.35.jpeg"
+              src="/banner.jpg"
               alt="Service 1"
               width={600} 
               height={400} 
